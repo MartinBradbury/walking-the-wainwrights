@@ -1,1 +1,1 @@
-web: gunicorn walking-wainwrights.wsgi
+web: gunicorn walking_wainwrights.wsgi

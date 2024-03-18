@@ -1,13 +1,17 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from .models import Route
 
-# Create your views here.
-
-
-
 def routes(request):
-    route = Route.objects.all()
-    return render(request, 'routes.html', {'route':route},)
+    route_list = Route.objects.all()
+    paginator = Paginator(route_list, 4)
+
+    page_number = request.GET.get('page')
+    page_object = paginator.get_page(page_number)
+    return render(request, 'routes.html', {'page_object': page_object})
+
+
+
 
 def routes_detail(request, slug):
     # return HttpResponse(slug)

@@ -4,7 +4,7 @@
 
 <p>This is the inserted block</p>
 
-{% for route in route %}
+{% for route in page_object %}
 
 <div>
     <a href="{% url 'routes:detail' slug=route.slug %}">
@@ -13,12 +13,26 @@
     <p>{{ route.snippet }} ... </p>
     <p>{{ route.created_on }}</p>
     <p>Created by: {{ route.author }}</p>
-
-
 </div>
 
+{% endfor %}
 
+<div class="pagination">
+    <span class="link-buttons">
+        {% if page_object.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_object.previous_page_number }}">previous</a>
+        {% endif %}
 
-{% endfor%}
+        <span class="current-page">
+            Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.
+        </span>
+
+        {% if page_object.has_next %}
+            <a href="?page={{ page_object.next_page_number }}">next</a>
+            <a href="?page={{ page_object.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
 
 {% endblock %}

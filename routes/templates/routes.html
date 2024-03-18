@@ -4,4 +4,18 @@
 
 <p>This is the inserted block</p>
 
+{% for route in route %}
+
+<div>
+    <h1>{{ route.title }}</h1>
+    <p>{{ route.content }}</p>
+    <p>{{ route.created_on }}</p>
+
+
+</div>
+
+
+
+{% endfor%}
+
 {% endblock %}

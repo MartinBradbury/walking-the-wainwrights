@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Route
 
 # Create your views here.
-
-# def routes (request):
-#     return HttpResponse("Testing")
 
 
 
 def routes(request):
-    return render(request, 'routes.html')
+
+    route = Route.objects.all()
+    return render(request, 'routes.html', {'route':route},)

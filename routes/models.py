@@ -16,6 +16,9 @@ class Route(models.Model):
     post_edit = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     flagged = models.BooleanField()
-
+    class Meta:
+        ordering = ["-created_on"]
     def __str__(self):
         return self.title
+    def snippet(self):
+        return self.content[:50]

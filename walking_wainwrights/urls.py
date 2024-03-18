@@ -19,6 +19,7 @@ from django.urls import path, include
 from routes import views as routes
 
 urlpatterns = [
+    path('summernote/', include('django_summernote.urls')),
     path('routes/', include('routes.urls')),
     path('admin/', admin.site.urls),
 ]

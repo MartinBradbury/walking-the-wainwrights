@@ -1,3 +1,79 @@
-h1 {
-    color: red;
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+p {
+    color:#333;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Social Media Icons */
+.footer a {
+    color: #333;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 30px;
+}
+
+.footer a:hover {
+    opacity: 0.6;
+}
+
+.footer a .fab.fa-facebook-f {
+    color: #3b5998;
+}
+
+.footer a .fab.fa-twitter {
+    color: #55acee;
+}
+
+.footer a .fab.fa-google {
+    color: #dd4b39;
+}
+
+.footer a .fab.fa-instagram {
+    color: #ac2bac;
+}
+
+.footer a .fab.fa-linkedin-in {
+    color: #007bb5;
+}
+
+.footer a .fab.fa-github {
+    color: #333;
+}
+
+.footer .btn:hover {
+    color: #000;
+}
+
+/* Copyright Section */
+.footer .text-dark {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .btn {
+        font-size: 20px;
+    }
 }

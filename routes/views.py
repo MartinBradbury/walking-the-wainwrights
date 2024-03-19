@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Route
 
 def routes(request):
@@ -11,6 +11,5 @@ def routes(request):
 
 
 def routes_detail(request, slug):
-    # return HttpResponse(slug)
-    route = Route.objects.get(slug=slug)
+    route = get_object_or_404(Route, slug=slug)
     return render(request, 'routes/routes_detail.html', {'route':route})

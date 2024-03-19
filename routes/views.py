@@ -15,15 +15,37 @@ class Routes(View):
 class RoutesDetail(View):
     def get(self, request, slug):
         route = get_object_or_404(Route, slug=slug)
-        comments = route.comments.all()
+        comments = route.comments.filter(approved=True).order_by("-created_on")
         comment_count = route.comments.filter(approved=True).count()
 
         return render(request, 'routes/routes_detail.html', 
         {
             'route': route,
             'comments': comments,
+            "commented": False,
             'comment_count':comment_count,
             'comment_form':CommentForm(),
             },
         )
 
+    def post(self, request, slug):
+        route = get_object_or_404(Route, slug=slug)
+        comments = route.comments.filter(approved=True).order_by("-created_on")
+        comment_count = route.comments.filter(approved=True).count()
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user 
+            comment.post = route
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(request, 'routes/routes_detail.html', 
+        {
+            'route': route,
+            'comments': comments,
+            "commented": True,
+            'comment_count': comment_count,
+            'comment_form': CommentForm(),
+        })

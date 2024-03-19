@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
-# Create your models here.
 
 class Route(models.Model):
     title = models.CharField(max_length=100)
@@ -22,3 +21,20 @@ class Route(models.Model):
         return self.title
     def snippet(self):
         return self.content[:50]
+
+class Comment(models.Model):
+    post = models.ForeignKey(Route, on_delete=models.CASCADE,
+                             related_name="comments")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter"
+    )
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    flagged = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.id} by {self.author}"

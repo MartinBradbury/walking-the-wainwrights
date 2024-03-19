@@ -7,7 +7,7 @@
 {% for route in page_object %}
 
 <div>
-    <a href="{% url 'routes:detail' slug=route.slug %}">
+    <a href="{% url 'routes:routes_detail' slug=route.slug %}">
     <h1>{{ route.title }}</h1>
     </a>
     <p>{{ route.snippet }} ... </p>

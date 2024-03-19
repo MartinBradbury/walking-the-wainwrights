@@ -20,7 +20,7 @@ from routes import views as routes
 
 urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
-    path('routes/', include('routes.urls')),
+    path('', include('routes.urls'), name='routes'),
     path('admin/', admin.site.urls),
     path('accounts/', include("allauth.urls")),
 ]

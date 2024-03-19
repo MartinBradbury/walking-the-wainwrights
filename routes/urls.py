@@ -1,11 +1,9 @@
 from django.urls import path
-from . import views
-
+from .views import Routes, RoutesDetail
 
 app_name = 'routes'
 
 urlpatterns = [
-    path('', views.routes, name='routes'),
-    path('<slug:slug>/', views.routes_detail, name="detail"),
+    path('', Routes.as_view(), name='routes'),
+    path('routes/<slug:slug>/', RoutesDetail.as_view(), name='routes_detail'),
 ]
-

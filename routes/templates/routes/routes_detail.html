@@ -15,38 +15,17 @@
     <p>{{ route.content }}</p>
     <p>{{ route.created_on }}</p>
     <p>Created by: {{ route.author }}</p>
-
-
+    <p>Difficulty: {{ route.difficulty_rating }}</p>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ route.content | safe }}
-                </p>
-                <div class="row">
-                    <div class="col-1">
-                        {% with comment_count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
+            {% with comment_count as total_comments %}
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+            <!-- Our total_comments variable goes before the closing strong tag -->
+            {{ total_comments }}</strong>
+            {% endwith %}
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->

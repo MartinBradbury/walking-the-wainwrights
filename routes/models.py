@@ -2,6 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 
 STATUS = ((0, "Draft"), (1, "Published"))
+DIFFICULTY_RATING = (
+    (1, '1'),
+    (2, '2'),
+    (3, '3'),
+    (4, '4'),
+    (5, '5'),
+)
 
 class Route(models.Model):
     title = models.CharField(max_length=100)
@@ -13,6 +20,7 @@ class Route(models.Model):
     os_url = models.CharField()
     created_on = models.DateTimeField(auto_now_add=True)
     post_edit = models.DateTimeField(auto_now=True)
+    difficulty_rating = models.IntegerField(choices=DIFFICULTY_RATING, default=1)
     status = models.IntegerField(choices=STATUS, default=0)
     flagged = models.BooleanField()
     class Meta:

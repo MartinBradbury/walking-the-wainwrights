@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 DIFFICULTY_RATING = (
@@ -25,6 +26,7 @@ class Route(models.Model):
         User, related_name='blogpost_like', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     flagged = models.BooleanField()
+    feature_img = CloudinaryField('image', default='placeholder')
     class Meta:
         ordering = ["-created_on"]
     def __str__(self):
@@ -44,6 +46,7 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     flagged = models.BooleanField(default=False)
+    feature_img = CloudinaryField('image', default='placeholder')
 
     class Meta:
         ordering = ["created_on"]

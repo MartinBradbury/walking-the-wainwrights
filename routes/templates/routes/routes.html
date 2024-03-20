@@ -7,6 +7,9 @@
 {% for route in page_object %}
 
 <div>
+    <div class="route-item">
+        <img src="{{ route.feature_img.url }}" width="10%" alt="{{ route.title }}">
+    </div>
     <a href="{% url 'routes:routes_detail' slug=route.slug %}">
     <h1>{{ route.title }}</h1>
     </a>
@@ -14,6 +17,7 @@
     <p>{{ route.created_on }}</p>
     <p>Created by: {{ route.author }}</p>
 </div>
+<hr>
 
 {% endfor %}
 

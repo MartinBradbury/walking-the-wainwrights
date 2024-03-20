@@ -20,6 +20,7 @@ from routes import views as routes
 
 urlpatterns = [
     path('', include('home.urls'), name='home'),
+    path('about/', include('about.urls'), name='about'),
     path('summernote/', include('django_summernote.urls')),
     path('routes/', include('routes.urls'), name='routes'),
     path('admin/', admin.site.urls),

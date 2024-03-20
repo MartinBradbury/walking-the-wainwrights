@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'fontawesomefree',
+    'about',
 ]
 
 SITE_ID = 1

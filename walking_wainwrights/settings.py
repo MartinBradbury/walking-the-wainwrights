@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'cloudinary_storage',
     'cloudinary',
+    'fontawesomefree',
 ]
 
 SITE_ID = 1

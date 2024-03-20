@@ -1,15 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.html import format_html
 
 STATUS = ((0, "Draft"), (1, "Published"))
-DIFFICULTY_RATING = (
-    (1, '1'),
-    (2, '2'),
-    (3, '3'),
-    (4, '4'),
-    (5, '5'),
-)
+DIFFICULTY_RATING = [
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    ]
 
 class Route(models.Model):
     title = models.CharField(max_length=100)
@@ -35,6 +36,13 @@ class Route(models.Model):
         return self.content[:50]
     def number_of_likes(self):
         return self.likes.count()
+    def difficulty_icon(self):
+        # Define the Font Awesome icon class for the star
+        icon_class = 'fa-solid fa-shoe-prints'
+        # Generate the HTML string for the icon, repeated as many times as the difficulty rating
+        icons_html = ''.join([f'<i class="fas {icon_class}"></i> | ' for _ in range(self.difficulty_rating)])
+        # Use format_html to safely format the HTML string
+        return format_html(icons_html)
 
 class Comment(models.Model):
     post = models.ForeignKey(Route, on_delete=models.CASCADE,

@@ -31,6 +31,8 @@ class Route(models.Model):
         return self.title
     def snippet(self):
         return self.content[:50]
+    def number_of_likes(self):
+        return self.likes.count()
 
 class Comment(models.Model):
     post = models.ForeignKey(Route, on_delete=models.CASCADE,

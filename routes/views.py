@@ -18,12 +18,16 @@ class RoutesDetail(View):
         route = get_object_or_404(Route, slug=slug)
         comments = route.comments.filter(approved=True).order_by("-created_on")
         comment_count = route.comments.filter(approved=True).count()
+        liked = False
+        if route.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
         return render(request, 'routes/routes_detail.html', 
         {
             'route': route,
             'comments': comments,
             "commented": False,
+            "liked": liked,
             'comment_count':comment_count,
             'comment_form':CommentForm(),
             },
@@ -34,6 +38,10 @@ class RoutesDetail(View):
         comments = route.comments.filter(approved=True).order_by("-created_on")
         comment_count = route.comments.filter(approved=True).count()
         comment_form = CommentForm(data=request.POST)
+        liked = False
+        if route.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user 
@@ -47,6 +55,7 @@ class RoutesDetail(View):
             'route': route,
             'comments': comments,
             "commented": True,
+            "liked": liked,
             'comment_count': comment_count,
             'comment_form': CommentForm(),
         })

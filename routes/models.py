@@ -21,6 +21,8 @@ class Route(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     post_edit = models.DateTimeField(auto_now=True)
     difficulty_rating = models.IntegerField(choices=DIFFICULTY_RATING, default=1)
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     flagged = models.BooleanField()
     class Meta:

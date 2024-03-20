@@ -1,8 +1,9 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import View
 from .models import Route
 from .forms import CommentForm
+from django.http import HttpResponseRedirect
 
 class Routes(View):
     def get(self, request):
@@ -49,3 +50,14 @@ class RoutesDetail(View):
             'comment_count': comment_count,
             'comment_form': CommentForm(),
         })
+
+
+class PostLike(View):
+    def post(self, request, slug):
+        route = get_object_or_404(Route, slug=slug)
+
+        if route.likes.filter(id=request.user.id).exists():
+            route.likes.remove(request.user)
+        else:
+            route.likes.add(request.user)
+        return HttpResponseRedirect(reverse('routes:routes_detail', args=[slug]))

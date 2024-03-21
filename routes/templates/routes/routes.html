@@ -28,11 +28,9 @@
             <a class="page-link" href="?page=1">&laquo; first</a>
             <a class="page-link" href="?page={{ page_object.previous_page_number }}">previous</a>
         {% endif %}
-
         <span class="page-link">
             Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.
         </span>
-
         {% if page_object.has_next %}
             <a class="page-link" href="?page={{ page_object.next_page_number }}">next</a>
             <a class="page-link" href="?page={{ page_object.paginator.num_pages }}">last &raquo;</a>

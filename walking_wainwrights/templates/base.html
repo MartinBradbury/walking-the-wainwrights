@@ -16,9 +16,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text-css">
     <script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
-
 </head>
 <body>
     <!-- Navbar -->
@@ -42,29 +41,30 @@
                 <li class="nav-item {% block nav_equipment_class %}{% endblock %}">
                     <a class="nav-link" href="#">Equipment</a>
                 </li>
-                 <!--login/out etc-->
-                 {% if user.is_authenticated %}
-                 <li class="nav-item">
-                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-                 </li>
-                 {% else %}
-                 <li class="nav-item">
-                     <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                         href="{% url 'account_signup' %}">Register</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-                 </li>
-                 {% endif %}
+                <!--login/out etc-->
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
             </ul>
+            <span class="navbar-text ml-auto">
+                {% if user.is_authenticated %}
+                You are logged in as {{ user }}
+                {% else %}
+                You are not logged in
+                {% endif %}
+            </span>
         </div>
     </nav>
-    {% if user.is_authenticated %}
-    <p class="text-end m-3">You are logged in as {{ user }}</p>
-    {% else %}
-    <p class="text-end m-3">You are not logged in</p>
-    {% endif %}
-
     <!-- Page Content -->
     <div class="container">
         {% block content %}
@@ -95,3 +95,9 @@
     <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
+
+
+
+
+
+

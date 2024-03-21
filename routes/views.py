@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import View
-from .models import Route
+from .models import Route, Comment
 from .forms import CommentForm
 from django.http import HttpResponseRedirect
 

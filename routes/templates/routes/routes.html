@@ -4,39 +4,41 @@
 
 <p>This is the inserted block</p>
 
-{% for route in page_object %}
-
-<div>
-    <div class="route-item">
-        <img src="{{ route.feature_img.url }}" width="10%" alt="{{ route.title }}">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for route in page_object %}
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <img src="{{ route.feature_img.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="{% url 'routes:routes_detail' slug=route.slug %}">
+                    <h5 class="card-title">{{ route.title }}</h5>
+                </a>
+                <p class="card-text">{{ route.snippet }} ... </p>
+                <p class="card-text"><small class="text-muted">{{ route.created_on }}</small></p>
+                <p class="card-text"><small class="text-muted">Created by: {{ route.author }}</small></p>
+            </div>
+        </div>
     </div>
-    <a href="{% url 'routes:routes_detail' slug=route.slug %}">
-    <h1>{{ route.title }}</h1>
-    </a>
-    <p>{{ route.snippet }} ... </p>
-    <p>{{ route.created_on }}</p>
-    <p>Created by: {{ route.author }}</p>
+    {% endfor %}
 </div>
-<hr>
 
-{% endfor %}
-
-<div class="pagination">
-    <span class="link-buttons">
+<div class="pagination text-center">
+    <div class="d-flex justify-content-between">
         {% if page_object.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ page_object.previous_page_number }}">previous</a>
+            <a class="page-link" href="?page=1">&laquo; first</a>
+            <a class="page-link" href="?page={{ page_object.previous_page_number }}">previous</a>
         {% endif %}
 
-        <span class="current-page">
+        <span class="page-link">
             Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.
         </span>
 
         {% if page_object.has_next %}
-            <a href="?page={{ page_object.next_page_number }}">next</a>
-            <a href="?page={{ page_object.paginator.num_pages }}">last &raquo;</a>
+            <a class="page-link" href="?page={{ page_object.next_page_number }}">next</a>
+            <a class="page-link" href="?page={{ page_object.paginator.num_pages }}">last &raquo;</a>
         {% endif %}
-    </span>
+    </div>
 </div>
+
 
 {% endblock %}

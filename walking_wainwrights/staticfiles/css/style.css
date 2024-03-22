@@ -10,6 +10,16 @@ p {
     color:#333;
 }
 
+/* Route Post Styling */
+
+.btn {
+    border: 2px solid black;
+}
+
+.faded p {
+    opacity:0.5;
+}
+
 /* Footer Styling */
 .footer {
     background-color: #f1f1f1;

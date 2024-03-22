@@ -16,7 +16,7 @@ class Routes(View):
 class RoutesDetail(View):
     def get(self, request, slug):
         route = get_object_or_404(Route, slug=slug)
-        comments = route.comments.filter(approved=True).order_by("-created_on")
+        comments = route.comments.all().order_by("-created_on")
         comment_count = route.comments.filter(approved=True).count()
         liked = False
         if route.likes.filter(id=self.request.user.id).exists():
@@ -35,7 +35,7 @@ class RoutesDetail(View):
 
     def post(self, request, slug):
         route = get_object_or_404(Route, slug=slug)
-        comments = route.comments.filter(approved=True).order_by("-created_on")
+        comments = route.comments.all().order_by("-created_on")
         comment_count = route.comments.filter(approved=True).count()
         comment_form = CommentForm(data=request.POST)
         liked = False

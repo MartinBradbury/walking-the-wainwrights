@@ -4,7 +4,7 @@
 {% block content %}
 
 {% load crispy_forms_tags %}
-<script type="text/javascript" src="https://www.outdooractive.com/en/embed/286984246/js?mw=false"></script>
+
 
 
 
@@ -12,7 +12,7 @@
 
 <div>
     <h1>{{ route.title }}</h1>
-    <p>{{ route.os_url }}</p>
+    <script type="text/javascript" src="{{ route.os_url }}"></script>
     <p>{{ route.content }}</p>
     <p>{{ route.created_on }}</p>
     <p>Created by: {{ route.author }}</p>
@@ -20,16 +20,6 @@
         Difficulty Rating:{{ route.difficulty_icon }}{{ route.difficulty_rating }}/5
     </p>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ post.content | safe }}
-                </p>
-                <div class="row">
 
 <div class="container">
     <div class="col-1">
@@ -103,7 +93,7 @@
                     </form>
                     {% endif %}
                     {% endif %}
-                </div>
+                
             </div>
         </div>
     </div>

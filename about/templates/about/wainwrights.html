@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block nav_about_class %}active{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Completed Wainwrights</h2>
+    <ul>
+        {% for wainwright in wainwrights %}
+            <li>
+                <h3>{{ wainwright.name }}</h3>
+                <p>{{ wainwright.description }}</p>
+                <img src="{{ wainwright.wainwright_img.url }}" alt="{{ wainwright.name }}">
+                <p>Completed: {{ wainwright.get_completed_display }}</p>
+            </li>
+        {% empty %}
+            <li>No Wainwrights completed yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

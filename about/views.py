@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About
+from .models import About, Wainwright
 from django.views import View
 
 
@@ -12,3 +12,7 @@ class AboutView(View):
             'about': about,
             },
         )
+
+def wainwrights(request):
+    wainwrights = Wainwright.objects.filter(completed=1)
+    return render(request, 'about/wainwrights.html', {'wainwrights': wainwrights})

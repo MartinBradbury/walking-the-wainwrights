@@ -13,6 +13,7 @@
             <h2>{{ about.title }}</h2>
             {{ about.content | safe }}
             {{ about.updated_on }}
+            <button class="btn btn-small"><a href="{% url 'about:wainwrights' %}">Button</a></button>
         </div>
     </div>
 </div>

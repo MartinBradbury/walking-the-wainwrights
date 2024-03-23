@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
 {% block nav_about_class %}active{% endblock %}
+
 {% block content %}
 
-<p>This is the About page</p>
-
-{% endblock %}
+<div class="container mt-5">
+    <div class="row g-0"> 
+        <div class="col-md-3 text-center">
+          <img src="{{ about.profile_img.url }}" class="profile_img img-fluid"
+          alt="{{ about.title }}">
+        </div>
+        <div class="col-md-9">
+            <h2>{{ about.title }}</h2>
+            {{ about.content | safe }}
+            {{ about.updated_on }}
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,4 +1,14 @@
 from django.shortcuts import render
+from .models import About
+from django.views import View
 
-def about_view(request):
-    return render(request, 'about/about.html')
+
+class AboutView(View):
+    def get(self, request):
+        about = About.objects.first() # Corrected line
+
+        return render(request, 'about/about.html', 
+        {
+            'about': about,
+            },
+        )

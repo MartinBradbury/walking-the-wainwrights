@@ -2,6 +2,43 @@
 {% block nav_gallery_class %}active{% endblock %}
 {% block content %}
 
-<p>This is the gallery page</p>
+
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for gallery in page_object %}
+    <div class="col-md-6 mb-4">
+        <div class="card">
+            <a href="#">
+            <img src="{{ gallery.user_img.url }}" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body">
+                <a href="#">
+                    <h5 class="card-title text-center">{{ gallery.title }}</h5>
+                </a>
+                <p class="card-text">{{ gallery.author }} ... </p>
+                <p class="card-text"><small class="text-muted">{{ gallery.uploaded_at }}</small></p>
+                <p class="card-text"><small class="text-muted">Created by: {{ gallery.author }}</small></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="pagination text-center">
+    <div class="d-flex justify-content-between">
+        {% if page_object.has_previous %}
+            <a class="page-link" href="?page=1">&laquo; first</a>
+            <a class="page-link" href="?page={{ page_object.previous_page_number }}">previous</a>
+        {% endif %}
+        <span class="page-link">
+            Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.
+        </span>
+        {% if page_object.has_next %}
+            <a class="page-link" href="?page={{ page_object.next_page_number }}">next</a>
+            <a class="page-link" href="?page={{ page_object.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+
 
 {% endblock %}

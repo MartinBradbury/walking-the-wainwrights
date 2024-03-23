@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
+from routes.models import Comment, Route
 
 STATUS = ((0, "Draft"), (1, "Published"))
 

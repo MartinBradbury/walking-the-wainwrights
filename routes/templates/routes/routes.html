@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% block nav_routes_class %}active{% endblock %}
 {% block content %}
-
-<p>This is the inserted block</p>
+<br>
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
     {% for route in page_object %}
     <div class="col-md-6 mb-4">
         <div class="card">
+            <a href="{% url 'routes:routes_detail' slug=route.slug %}">
             <img src="{{ route.feature_img.url }}" class="card-img-top" alt="...">
+            </a>
             <div class="card-body">
                 <a href="{% url 'routes:routes_detail' slug=route.slug %}">
-                    <h5 class="card-title">{{ route.title }}</h5>
+                    <h5 class="card-title text-center">{{ route.title }}</h5>
                 </a>
                 <p class="card-text">{{ route.snippet }} ... </p>
                 <p class="card-text"><small class="text-muted">{{ route.created_on }}</small></p>

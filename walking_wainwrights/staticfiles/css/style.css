@@ -20,6 +20,10 @@ p {
     opacity:0.5;
 }
 
+.wainwright-item {
+    margin-bottom: 40px;
+   }
+
 /* Footer Styling */
 .footer {
     background-color: #f1f1f1;

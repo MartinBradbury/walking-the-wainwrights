@@ -3,18 +3,18 @@
 
 {% block content %}
 
-<div class="container mt-5">
-    <div class="row g-0"> 
-        <div class="col-md-3 text-center">
-          <img src="{{ about.profile_img.url }}" class="profile_img img-fluid"
+<div class="container">
+    <div class="row">
+      <div class="col-9">
+        <h2 class="text-center">{{ about.title }}</h2>
+      </div>
+      <div class="col-4">
+        <img src="{{ about.profile_img.url }}" class="profile_img img-fluid"
           alt="{{ about.title }}">
-        </div>
-        <div class="col-md-9">
-            <h2>{{ about.title }}</h2>
-            {{ about.content | safe }}
-            {{ about.updated_on }}
-            <button class="btn btn-small"><a href="{% url 'about:wainwrights' %}">Button</a></button>
-        </div>
+      </div>
+      <div class="col-6"><p>{{ about.content | safe }}</p><br><p>{{ about.updated_on }}</p></div>
+      <button class="btn btn-small"><a href="{% url 'about:wainwrights' %}">Button</a></button>
     </div>
-</div>
+  </div>
 {% endblock content %}
+

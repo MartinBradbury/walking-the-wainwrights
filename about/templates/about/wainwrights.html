@@ -2,19 +2,23 @@
 {% block nav_about_class %}active{% endblock %}
 
 {% block content %}
+<h2 class="text-center">Completed Wainwrights</h2>
 <div class="container">
-    <h2>Completed Wainwrights</h2>
-    <ul>
-        {% for wainwright in wainwrights %}
-            <li>
-                <h3>{{ wainwright.name }}</h3>
-                <p>{{ wainwright.description }}</p>
-                <img src="{{ wainwright.wainwright_img.url }}" alt="{{ wainwright.name }}">
-                <p>Completed: {{ wainwright.get_completed_display }}</p>
-            </li>
-        {% empty %}
-            <li>No Wainwrights completed yet.</li>
-        {% endfor %}
-    </ul>
-</div>
+    <div class="row">
+      {% for wainwright in wainwrights %}
+      <div class="col-9">
+        <h3>{{ wainwright.name }}</h3>
+      </div>
+      <div class="col-4 wainwright-item d-flex align-items-center">       
+            <img src="{{ wainwright.wainwright_img.url }}" class="img-fluid" alt="{{ wainwright.name }}">
+      </div>
+      <div class="col-6">
+        <p>{{ wainwright.description }}</p>
+        <p>Completed: {{ wainwright.get_completed_display }}</p>    
+        </div>
+        {% endfor %} 
+    </div>
+  </div>
 {% endblock %}
+
+

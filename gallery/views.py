@@ -4,6 +4,7 @@ from django.views import View
 from .models import Route, Comment, Gallery
 from .forms import CommentForm
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 
 
 class GalleryView(View):
@@ -72,3 +73,42 @@ class PostLike(View):
         else:
             gallery.likes.add(request.user)
         return HttpResponseRedirect(reverse('gallery:gallery_detail', args=[slug]))
+
+def comment_edit(request, slug, comment_id):
+    """
+    view to edit comments
+    """
+    if request.method == "POST":
+
+        queryset = Gallery.objects.filter(status=1)
+        gallery = get_object_or_404(queryset, slug=slug)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        comment_form = CommentForm(data=request.POST, instance=comment)
+
+        if comment_form.is_valid() and comment.author == request.user:
+            comment = comment_form.save(commit=False)
+            comment.post = gallery
+            comment.approved = False
+            comment.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('gallery:gallery_detail', args=[slug]))
+
+
+def comment_delete(request, slug, comment_id):
+    """
+    view to delete comment
+    """
+    queryset = Gallery.objects.filter(status=1)
+    gallery = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+
+    return HttpResponseRedirect(reverse('gallery:gallery_detail', args=[slug]))

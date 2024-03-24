@@ -13,7 +13,31 @@ class Gallery(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.IntegerField(choices=STATUS, default=0)
     flagged = models.BooleanField()
-    img_detail = models.TextField()
+    img_detail = models.TextField(max_length=50)
+    likes = models.ManyToManyField(
+        User, related_name='image_like', blank=True)
 
+    class Meta:
+        ordering = ["-uploaded_at"]
     def __str__(self):
         return self.title
+    def number_of_likes(self):
+        return self.likes.count()
+        
+class Comment(models.Model):
+    post = models.ForeignKey(Gallery, on_delete=models.CASCADE,
+                             related_name="comments")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="gallery_comments"
+    )
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    flagged = models.BooleanField(default=False)
+    feature_img = CloudinaryField('image', default='placeholder')
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.id} by {self.author}"

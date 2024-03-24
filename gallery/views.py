@@ -18,57 +18,57 @@ class GalleryDetail(View):
     def get(self, request, slug):
         gallery = get_object_or_404(Gallery, slug=slug)
         print('slug')
-        # comments = gallery.comments.all().order_by("-created_on")
-        # comment_count = gallery.comments.filter(approved=True).count()
-        # liked = False
-        # if gallery.likes.filter(id=self.request.user.id).exists():
-        #     liked = True
+        comments = gallery.comments.all().order_by("-created_on")
+        comment_count = gallery.comments.filter(approved=True).count()
+        liked = False
+        if gallery.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
         return render(request, 'gallery/gallery_detail.html', 
         {
             'gallery': gallery,
-            # 'comments': comments,
-            # "commented": False,
-            # "liked": liked,
-            # 'comment_count':comment_count,
-            # 'comment_form':CommentForm(),
+            'comments': comments,
+            "gallery_comments": False,
+            "liked": liked,
+            'comment_count':comment_count,
+            'comment_form':CommentForm(),
             },
         )
 
-#     def post(self, request, slug):
-#         route = get_object_or_404(Route, slug=slug)
-#         comments = route.comments.all().order_by("-created_on")
-#         comment_count = route.comments.filter(approved=True).count()
-#         comment_form = CommentForm(data=request.POST)
-#         liked = False
-#         if route.likes.filter(id=self.request.user.id).exists():
-#             liked = True
+    def post(self, request, slug):
+        gallery = get_object_or_404(Gallery, slug=slug)
+        comments = gallery.comments.all().order_by("-created_on")
+        comment_count = gallery.comments.filter(approved=True).count()
+        comment_form = CommentForm(data=request.POST)
+        liked = False
+        if gallery.likes.filter(id=self.request.user.id).exists():
+            liked = True
 
-#         if comment_form.is_valid():
-#             comment = comment_form.save(commit=False)
-#             comment.author = request.user 
-#             comment.post = route
-#             comment.save()
-#         else:
-#             comment_form = CommentForm()
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user 
+            comment.post = gallery
+            comment.save()
+        else:
+            comment_form = CommentForm()
 
-#         return render(request, 'routes/routes_detail.html', 
-#         {
-#             'route': route,
-#             'comments': comments,
-#             "commented": True,
-#             "liked": liked,
-#             'comment_count': comment_count,
-#             'comment_form': CommentForm(),
-#         })
+        return render(request, 'gallery/gallery_detail.html', 
+        {
+            'gallery': gallery,
+            'comments': comments,
+            "gallery_comments": True,
+            "liked": liked,
+            'comment_count': comment_count,
+            'comment_form': CommentForm(),
+        })
 
 
-# class PostLike(View):
-#     def post(self, request, slug):
-#         route = get_object_or_404(Route, slug=slug)
+class PostLike(View):
+    def post(self, request, slug):
+        gallery = get_object_or_404(Gallery, slug=slug)
 
-#         if route.likes.filter(id=request.user.id).exists():
-#             route.likes.remove(request.user)
-#         else:
-#             route.likes.add(request.user)
-#         return HttpResponseRedirect(reverse('routes:routes_detail', args=[slug]))
+        if gallery.likes.filter(id=request.user.id).exists():
+            gallery.likes.remove(request.user)
+        else:
+            gallery.likes.add(request.user)
+        return HttpResponseRedirect(reverse('gallery:gallery_detail', args=[slug]))

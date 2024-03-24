@@ -16,3 +16,6 @@ class AboutView(View):
 def wainwrights(request):
     wainwrights = Wainwright.objects.filter(completed=1)
     return render(request, 'about/wainwrights.html', {'wainwrights': wainwrights})
+
+def contact(request):
+    return render(request, 'contact/contact.html',)

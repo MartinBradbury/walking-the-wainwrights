@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'routes',
-    'home',
+    'contact',
     'django_summernote',
     'django.contrib.sites',
     'allauth',

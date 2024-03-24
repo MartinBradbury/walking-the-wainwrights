@@ -15,22 +15,23 @@ class GalleryView(View):
         return render(request, 'gallery/gallery.html', {'page_object': page_object})
 
 class GalleryDetail(View):
-    def get(self, request):
-        gallery = get_object_or_404(GalleryView)
-        comments = gallery.comments.all().order_by("-created_on")
-        comment_count = gallery.comments.filter(approved=True).count()
-        liked = False
-        if gallery.likes.filter(id=self.request.user.id).exists():
-            liked = True
+    def get(self, request, slug):
+        gallery = get_object_or_404(Gallery, slug=slug)
+        print('slug')
+        # comments = gallery.comments.all().order_by("-created_on")
+        # comment_count = gallery.comments.filter(approved=True).count()
+        # liked = False
+        # if gallery.likes.filter(id=self.request.user.id).exists():
+        #     liked = True
 
         return render(request, 'gallery/gallery_detail.html', 
         {
             'gallery': gallery,
-            'comments': comments,
-            "commented": False,
-            "liked": liked,
-            'comment_count':comment_count,
-            'comment_form':CommentForm(),
+            # 'comments': comments,
+            # "commented": False,
+            # "liked": liked,
+            # 'comment_count':comment_count,
+            # 'comment_form':CommentForm(),
             },
         )
 

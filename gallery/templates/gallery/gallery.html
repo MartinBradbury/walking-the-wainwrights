@@ -8,11 +8,11 @@
     {% for gallery in page_object %}
     <div class="col-md-6 mb-4">
         <div class="card">
-            <a href="#">
+            <a href="{% url 'gallery:gallery_detail' slug=gallery.slug %}">
             <img src="{{ gallery.user_img.url }}" class="card-img-top" alt="...">
             </a>
             <div class="card-body">
-                <a href="#">
+                <a href="{% url 'gallery:gallery_detail' slug=gallery.slug %}">
                     <h5 class="card-title text-center">{{ gallery.title }}</h5>
                 </a>
                 <p class="card-text">{{ gallery.author }} ... </p>

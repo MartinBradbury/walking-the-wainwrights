@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from cloudinary.forms import CloudinaryFileField
 from django.contrib.auth.models import User
 from routes.models import Comment, Route
 
@@ -34,7 +35,7 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     flagged = models.BooleanField(default=False)
-    feature_img = CloudinaryField('image', default='placeholder')
+    feature_img = models.URLField(blank=True, null=True)
 
     class Meta:
         ordering = ["created_on"]

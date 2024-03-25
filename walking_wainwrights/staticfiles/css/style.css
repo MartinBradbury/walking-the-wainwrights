@@ -111,15 +111,19 @@ width: 100%;
 }
 
 .carousel-caption {
-    bottom: 50px;
+    bottom: 50px;   
+}
+
+.translucent-bg {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
+    border-radius: 5px;
+
 }
 
 .carousel-inner p {
     color:aliceblue;
-    
-
 }
-
 
 .about_container {
     margin-top:100px;

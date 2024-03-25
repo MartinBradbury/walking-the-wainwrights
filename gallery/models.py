@@ -8,7 +8,6 @@ from django.template.defaultfilters import slugify
 STATUS = ((0, "Draft"), (1, "Published"))
 
 class Gallery(models.Model):
-    user_img = models.URLField(blank=True, null=True)
     title = models.CharField(max_length=255, blank=True)
     slug = models.SlugField(max_length=100)
     uploaded_at = models.DateTimeField(auto_now_add=True)

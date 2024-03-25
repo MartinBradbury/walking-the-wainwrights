@@ -29,9 +29,9 @@ class GalleryView(View):
             gallery.save() # Save the gallery item
             messages.success(request, 'Gallery uploaded successfully!')
             
-            # Re-fetch the user_images and paginate them to get the updated page_object
-            user_images = Gallery.objects.filter(status=1)
-            paginator = Paginator(user_images, 4)
+            # Re-fetch the feaure_img and paginate them to get the updated page_object
+            feature_img = Gallery.objects.filter(status=1)
+            paginator = Paginator(feature_img, 4)
             page_number = request.GET.get('page')
             page_object = paginator.get_page(page_number)
             

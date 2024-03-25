@@ -4,7 +4,7 @@ from .models import Gallery, Comment
 
 @admin.register(Gallery)
 class GalleryAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'author', 'status','flagged',)
+    list_display = ('title', 'author', 'status','flagged', 'user_img')
     search_fields = ['title', 'author', 'flagged', 'status',]
     list_filter = ('status', 'flagged',)
 

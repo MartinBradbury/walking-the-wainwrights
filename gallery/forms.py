@@ -7,3 +7,9 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
+
+class GalleryForm(forms.ModelForm):
+
+    class Meta:
+        model = Gallery
+        fields = ['title', 'user_img']

@@ -5,7 +5,7 @@ from django.views import View
 from django.contrib import messages
 
 from .models import Gallery, Comment
-from .forms import CommentForm
+from .forms import CommentForm, GalleryForm
 
 class GalleryView(View):
     def get(self, request):
@@ -13,11 +13,40 @@ class GalleryView(View):
         paginator = Paginator(user_images, 4)
         page_number = request.GET.get('page')
         page_object = paginator.get_page(page_number)
-        comment_form = CommentForm()
+        gallery_form = GalleryForm()
         return render(request, 'gallery/gallery.html', {
             'page_object': page_object,
-            'comment_form': comment_form,
+            'gallery_form': gallery_form,
         })
+
+    def post(self, request):
+        gallery_form = GalleryForm(request.POST, request.FILES)
+        if gallery_form.is_valid():
+            gallery = gallery_form.save(commit=False)
+            gallery.author = request.user
+            gallery.save() # Save the gallery item
+            messages.success(request, 'Gallery uploaded successfully!')
+            
+            # Re-fetch the user_images and paginate them to get the updated page_object
+            user_images = Gallery.objects.filter(status=1)
+            paginator = Paginator(user_images, 4)
+            page_number = request.GET.get('page')
+            page_object = paginator.get_page(page_number)
+            
+            return render(request, 'gallery/gallery.html', {
+                'page_object': page_object,
+                'gallery_form': GalleryForm(),
+            })
+        else:
+            messages.error(request, 'Error uploading gallery. Please try again.')
+            return render(request, 'gallery/gallery.html', {
+                'page_object': page_object,
+                'gallery_form': GalleryForm(),
+            })
+
+
+
+
 
 class GalleryDetail(View):
     def get(self, request, slug):

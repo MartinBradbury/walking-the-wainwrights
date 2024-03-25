@@ -4,7 +4,7 @@
 {% block content %}
 
 
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide" id="top" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -113,6 +113,8 @@
         <div class="col-12">
             <button class="btn btn-primary"><a href="{% url 'about:wainwrights' %}" class="text-white">Button</a></button>
             <button class="btn btn-secondary"><a href="{% url 'contact:contact' %}" class="text-white">Contact Me</a></button>
+            <button class="btn btn-secondary"><a href="#top" class="text-white">Back to the top</a></button>
+            
         </div>
     </div>
 </div>

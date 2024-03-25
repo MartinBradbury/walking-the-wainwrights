@@ -6,9 +6,9 @@ body {
     background-color: #f1f1f1;
 }
 
-p {
+/* p {
     color:#333;
-}
+} */
 
 /* Route Post Styling */
 
@@ -100,15 +100,19 @@ p {
 
 
 .carousel-item {
-    height: 700px; /* Adjust this value to your desired height */
+    height: 620px; /* Adjust this value to your desired height */
    }
    
-   /* Adjust the size of the images within the carousel item */
-   .carousel-item img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-   }
+/* Adjust the size of the images within the carousel item */
+.carousel-item img {
+object-fit: cover;
+height: 100%;
+width: 100%;
+}
+
+.carousel-caption {
+    bottom: 50px;
+}
 
 .carousel-inner p {
     color:aliceblue;
@@ -117,6 +121,6 @@ p {
 }
 
 
-#about_container {
+.about_container {
     margin-top:100px;
 }

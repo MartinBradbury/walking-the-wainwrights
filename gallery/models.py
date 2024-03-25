@@ -16,6 +16,7 @@ class Gallery(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     flagged = models.BooleanField(default=False)
     img_detail = models.TextField(max_length=50)
+    feature_img = models.URLField(blank=True, null=True)
     likes = models.ManyToManyField(
         User, related_name='image_like', blank=True)
 

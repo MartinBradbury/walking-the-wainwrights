@@ -10,8 +10,8 @@ from .forms import CommentForm, GalleryForm
 
 class GalleryView(View):
     def get(self, request):
-        user_images = Gallery.objects.filter(status=1)
-        paginator = Paginator(user_images, 4)
+        feature_img = Gallery.objects.filter(status=1)
+        paginator = Paginator(feature_img, 4)
         page_number = request.GET.get('page')
         page_object = paginator.get_page(page_number)
         gallery_form = GalleryForm()
@@ -25,6 +25,7 @@ class GalleryView(View):
         if gallery_form.is_valid():
             gallery = gallery_form.save(commit=False)
             gallery.author = request.user
+            gallery.feature_img = request.POST.get('feature_img')
             gallery.save() # Save the gallery item
             messages.success(request, 'Gallery uploaded successfully!')
             

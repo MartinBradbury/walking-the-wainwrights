@@ -19,3 +19,13 @@ class Wainwright(models.Model):
 
     def __str__(self):
         return self.name
+
+class Carousel(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.CharField(max_length=100)
+    img_1 = CloudinaryField('image', default='placeholder')
+    img_2 = CloudinaryField('image', default='placeholder')
+    img_3 = CloudinaryField('image', default='placeholder')
+
+    def __str__(self):
+        return self.title

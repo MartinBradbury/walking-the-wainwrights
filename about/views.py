@@ -1,15 +1,16 @@
 from django.shortcuts import render
-from .models import About, Wainwright
+from .models import About, Wainwright, Carousel
 from django.views import View
 
 
 class AboutView(View):
     def get(self, request):
         about = About.objects.first() # Corrected line
-
+        carousel = Carousel.objects.all()[0]
         return render(request, 'about/about.html', 
         {
             'about': about,
+            'carousel': carousel,
             },
         )
 

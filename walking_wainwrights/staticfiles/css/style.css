@@ -98,14 +98,25 @@ p {
 
 /* carousel images*/
 
-.carousel-inner > .carousel-item > img {
-    width: 1280px; /* Adjust the width as needed */
-    height: 100%; /* Adjust the height as needed */
-    object-fit: cover; /* This will ensure the images cover the area without stretching */
+
+.carousel-item {
+    height: 700px; /* Adjust this value to your desired height */
+   }
+   
+   /* Adjust the size of the images within the carousel item */
+   .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
    }
 
+.carousel-inner p {
+    color:aliceblue;
+    
 
-.main {
-    padding: 0;
-    width: 100%;
+}
+
+
+#about_container {
+    margin-top:100px;
 }

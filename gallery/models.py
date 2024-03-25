@@ -3,6 +3,7 @@ from cloudinary.models import CloudinaryField
 from cloudinary.forms import CloudinaryFileField
 from django.contrib.auth.models import User
 from routes.models import Comment, Route
+from django.template.defaultfilters import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -24,6 +25,10 @@ class Gallery(models.Model):
         return self.title
     def number_of_likes(self):
         return self.likes.count()
+    def save(self, *args, **kwargs):
+        if self.title:
+            self.slug = slugify(self.title)
+        super(Gallery, self).save(*args, **kwargs)
         
 class Comment(models.Model):
     post = models.ForeignKey(Gallery, on_delete=models.CASCADE,

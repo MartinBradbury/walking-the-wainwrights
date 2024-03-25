@@ -7,6 +7,7 @@ from django.contrib import messages
 from .models import Gallery, Comment
 from .forms import CommentForm, GalleryForm
 
+
 class GalleryView(View):
     def get(self, request):
         user_images = Gallery.objects.filter(status=1)

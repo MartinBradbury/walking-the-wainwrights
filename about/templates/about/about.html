@@ -17,7 +17,7 @@
           <div class="carousel-caption translucent-bg">
             <h1>Routes</h1>
             <p>Come and take a look at the routes I have completed</p>
-            <p><a class="btn btn-lg btn-primary" href="{% url 'routes:routes' %}" role="button">Routes</a></p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="{% url 'routes:routes' %}" role="button">Routes</a></p> -->
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
           <div class="carousel-caption translucent-bg">
             <h1>Photo Gallery</h1>
             <p>Come take a look at photos I have taken or share your own</p>
-            <p><a class="btn btn-lg btn-primary" href="{% url 'gallery:gallery' %}" role="button">Gallery</a></p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="{% url 'gallery:gallery' %}" role="button">Gallery</a></p> -->
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
           <div class="carousel-caption translucent-bg">
             <h1>About Me</h1>
             <p>Read about my journey as I am to complete all the Wainwrights</p>
-            <p><a class="btn btn-lg btn-primary" href="{% url 'about:about' %}" role="button">About</a></p>
+            <!-- <p><a class="btn btn-lg btn-primary" href="{% url 'about:about' %}" role="button">About</a></p> -->
           </div>
         </div>
       </div>
@@ -52,6 +52,48 @@
     </a>
   </div>
 <br>
+<div class="container">
+  <div class="row">
+     <div class="col-lg-4 text-center">
+       <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+       <h2>Routes</h2>
+       <p>Explore the routes I have taken so far and the wainwrights achieved.</p>
+       <p><a class="btn btn-secondary" href="{% url 'routes:routes' %}" role="button">Register</a></p>
+     </div><!-- /.col-lg-4 -->
+     <div class="col-lg-4 text-center">
+       <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+       <h2>Gallery</h2>
+       <p>Take a look at pictures I have taken or what other users have submitted.</p>
+       <p><a class="btn btn-secondary" href="{% url 'gallery:gallery' %}" role="button">Gallery</a></p>
+     </div><!-- /.col-lg-4 -->
+     <div class="col-lg-4 text-center">
+       <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+       <h2>Wainwrights</h2>
+       <p>Discover the Wainwrights I have completed so far.</p>
+       <p><a class="btn btn-secondary" href="{% url 'about:wainwrights' %}" role="button">Wainwrights</a></p>
+     </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+ </div>
+ 
+ <br>
+ <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="container">
     <div class="row">

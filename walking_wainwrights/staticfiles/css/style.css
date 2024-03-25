@@ -91,3 +91,21 @@ p {
         font-size: 20px;
     }
 }
+
+
+
+
+
+/* carousel images*/
+
+.carousel-inner > .carousel-item > img {
+    width: 1280px; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    object-fit: cover; /* This will ensure the images cover the area without stretching */
+   }
+
+
+.main {
+    padding: 0;
+    width: 100%;
+}

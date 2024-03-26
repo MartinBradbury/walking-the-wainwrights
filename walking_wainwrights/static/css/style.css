@@ -190,6 +190,10 @@ width: 100%;
     
 }
 
+.col-lg-4 {
+    margin-bottom: 100px;
+}
+
 
 
 
@@ -211,6 +215,28 @@ hr {
     top: 0;
     width: 100%;
     z-index: 1000; /* Ensure the navbar is above the carousel */
+}
+
+
+/* Change the toggler icon color to white */
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Add a white border to the toggler button */
+.navbar-toggler {
+    border-color: white;
+}
+
+/* Change the background color of the dropdown menu */
+@media only screen and (max-width: 480px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 20px;
+        margin-top: 11px;
+    }
 }
 
 .navbar a{

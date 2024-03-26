@@ -26,15 +26,15 @@
 <div class="pagination text-center">
     <div class="d-flex justify-content-between">
         {% if page_object.has_previous %}
-            <button class="btn btn-secondary"><a href="?page=1" class="text-light">&laquo; first</a></button>
-            <button class="btn btn-secondary"><a href="?page={{ page_object.previous_page_number }}" class="text-light">previous</a></button>
+            <a href="?page=1" class="btn btn-secondary text-light text-decoration-none mr-2">&laquo; first</a>
+            <a href="?page={{ page_object.previous_page_number }}" class="btn btn-secondary text-light text-decoration-none">previous</a>
         {% endif %}
         <span>
-            <button class="btn btn-secondary">Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.</button>
+            <button class="btn btn-secondary mr-2 ml-2" disabled>Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.</button>
         </span>
         {% if page_object.has_next %}
-        <button class="btn btn-secondary"><a href="?page={{ page_object.next_page_number }}" class="text-light">next</a></button>
-        <button class="btn btn-secondary"><a href="?page={{ page_object.paginator.num_pages }}" class="text-light">last &raquo;</a></button>
+        <a href="?page={{ page_object.next_page_number }}" class="btn btn-secondary text-light text-decoration-none">next</a>
+        <a href="?page={{ page_object.paginator.num_pages }}" class="btn btn-secondary text-light text-decoration-none ml-2">last &raquo;</a>
         {% endif %}
     </div>
 </div>

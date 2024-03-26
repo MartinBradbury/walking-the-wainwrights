@@ -27,15 +27,17 @@
 </div>
 
 
-    <div class="col-0 ml-0">
+<div>
     <strong>
         {% if user.is_authenticated %}
         <form class="d-inline" action="{% url 'routes:post-like' route.slug %}" method="POST">
             {% csrf_token %}
             {% if liked %}
-            <button type="submit" name="blogpost_id" value="{{post.slug}}" id="btn-like" style="border: none; outline: none;"><i class="fas fa-heart"></i></button>
+            <button type="submit" name="blogpost_id" value="{{post.slug}}" 
+                style="border: none; outline: none; color: red;"><i class="fas fa-heart fa-3x"></i></button>
             {% else %}
-            <button type="submit" name="blogpost_id" value="{{post.slug}}" id="btn-like" style="border: none; outline: none;"><i class="fas fa-heart"></i></button>
+            <button type="submit" name="blogpost_id" value="{{post.slug}}" 
+                style="border: none; outline: none; color: red;"><i class="far fa-heart fa-3x"></i></button>
             {% endif %}
         </form>
         {% else %}

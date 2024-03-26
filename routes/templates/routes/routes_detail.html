@@ -15,19 +15,15 @@
 </div>
 {% endif %}
 
-<div>
+<div class="container">
     <h1>{{ route.title }}</h1>
     <script type="text/javascript" src="{{ route.os_url }}"></script>
-    <p>{{ route.content }}</p>
-    <p>{{ route.created_on }}</p>
-    <p>Created by: {{ route.author }}</p>
-    <p>
-        Difficulty Rating:{{ route.difficulty_icon }}{{ route.difficulty_rating }}/5
-    </p>
-</div>
-
-
-<div>
+    <br>
+    <hr>
+    <h6>
+        Difficulty Rating:  {{ route.difficulty_icon }}{{ route.difficulty_rating }}/5
+    </h6>
+    <br>
     <strong>
         {% if user.is_authenticated %}
         <form class="d-inline" action="{% url 'routes:post-like' route.slug %}" method="POST">
@@ -47,7 +43,15 @@
         
         <span class="text-secondary">{{ route.number_of_likes }} </span>
     </strong>
+    <br>
+    <hr>
+    <p>{{ route.content }}</p>
+    <p>{{ route.created_on }}</p>
+    <p>Created by: {{ route.author }}</p>
+    
 </div>
+<br>
+<hr>
     <div class="container">
     <div class="row">
         <div class="col-md-8 card mb-4 mt-3 ml-0">

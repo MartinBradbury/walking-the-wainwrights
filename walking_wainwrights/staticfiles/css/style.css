@@ -35,7 +35,7 @@ body {
 }
 
 /* Social Media Icons */
-.footer a {
+.footer a p {
     color: #333;
     background-color: transparent;
     border: none;
@@ -81,7 +81,7 @@ body {
 }
 
 /* Copyright Section */
-.footer .text-dark {
+.copyright {
     color: #333;
 }
 
@@ -127,4 +127,18 @@ width: 100%;
 
 .about_container {
     margin-top:100px;
+}
+
+
+.btn-like {
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    padding: 0; /* Remove default padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    color: #000; /* Set icon color */
+    font-size: 1.5em; /* Adjust icon size */
+}
+
+.btn-like:hover {
+    color: #f00; /* Change icon color on hover */
 }

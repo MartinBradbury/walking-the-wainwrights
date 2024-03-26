@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f1f1f1;
+    background-color: black;
 }
 
 /* p {
@@ -97,8 +97,6 @@ body {
 
 
 /* carousel images*/
-
-
 .carousel-item {
     height: 620px; /* Adjust this value to your desired height */
    }
@@ -125,19 +123,120 @@ width: 100%;
     color:aliceblue;
 }
 
+
+
 .about_container {
     margin-top:100px;
 }
 
-.btn-like {
-    background: none; /* Remove default background */
-    border: none; /* Remove default border */
-    padding: 0; /* Remove default padding */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    color: #000; /* Set icon color */
-    font-size: 1.5em; /* Adjust icon size */
+.about-me {
+    color: white;
 }
 
-.btn-like:hover {
-    color: #f00; /* Change icon color on hover */
+/* Page Top Icon */
+
+.page-top {
+    border: 1px solid white;    
+}
+
+.page-top:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fa-angle-up {
+    text-decoration: none;
+    color:white;
+}
+
+
+
+/* Like button Styling */
+
+.like-btn {
+    color: red;
+    border: none;
+    outline: none;
+    background-color: black;
+}
+
+
+
+
+/* Main Body Content About Page */
+.main-body {
+    color: rgba(255, 255, 255, 0.692);
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.main-body a {
+    color: rgba(255, 255, 255, 0.692);
+    text-decoration: none;
+}
+
+.main-body a:hover {
+    color: white;
+}
+
+.main-body h2 {
+    margin-bottom: 40px;
+}
+
+.main-body img {
+    box-shadow: 0 .5rem 6rem rgba(255, 255, 255, 0.377);
+    margin: 0px;
+    margin-bottom: 50px;
+    border: 2px solid black;   
+    
+}
+
+
+
+
+hr {
+    height: 4px; /* Optional: Adjust the height of the line */
+    background-color: white; /* Set the color to white */
+    border: none; /* Remove the default border */
+}
+
+
+
+
+
+/* NAV BAR */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 60px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above the carousel */
+}
+
+.navbar a{
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.logged-in {
+    color: white;
+}
+
+#navbarNav:active {
+    color: white;
+}
+
+.nav-item.active > .nav-link {
+    color: white;
+}
+
+.sticky-navbar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Distance from the top of the viewport */
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
 }

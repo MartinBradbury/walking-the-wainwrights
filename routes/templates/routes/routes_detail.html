@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% block nav_routes_class %}active{% endblock %}
 {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -29,19 +28,18 @@
         <form class="d-inline" action="{% url 'routes:post-like' route.slug %}" method="POST">
             {% csrf_token %}
             {% if liked %}
-            <button type="submit" name="blogpost_id" value="{{post.slug}}" 
-                style="border: none; outline: none; color: red;"><i class="fas fa-heart fa-3x"></i></button>
+            <button type="submit" class="like-btn" value="{{post.slug}}"><i class="fas fa-heart fa-3x"></i></button>
             {% else %}
-            <button type="submit" name="blogpost_id" value="{{post.slug}}" 
-                style="border: none; outline: none; color: red;"><i class="far fa-heart fa-3x"></i></button>
+            <button type="submit" class="like-btn" value="{{post.slug}}"><i class="far fa-heart fa-3x"></i></button>
             {% endif %}
         </form>
         {% else %}
-        <span class="text-secondary"><i class="far fa-heart"></i></span>
+        <span class="like-btn"><i class="far fa-heart fa-3x"></i></span>
+        <span class="text-secondary text-light">{{ route.number_of_likes }} </span>
         <p>You must be logged in to like this post.</p>
         {% endif %}
         
-        <span class="text-secondary">{{ route.number_of_likes }} </span>
+        
     </strong>
     <br>
     <hr>

@@ -1,6 +1,4 @@
 {% extends 'base.html' %}
-{% block nav_about_class %}active{% endblock %}
-
 {% block content %}
 
 
@@ -57,23 +55,29 @@
     </a>
   </div>
 <br>
-<div class="container">
+<div class="main-body">
   <div class="row">
      <div class="col-lg-4 text-center">
-       <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+      <a href="{% url 'routes:routes' %}">
+       <img class="rounded-circle" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+      </a>
        <h2><a href="{% url 'routes:routes' %}">Routes</a></h2>
        <p>My routes page is a comprehensive guide to the tracks I've taken, detailing the difficulty of each route and sharing 
         my personal experiences, offering a unique insight into the challenges and rewards of hiking in the Lake District.</p>
      </div><!-- /.col-lg-4 -->
      <div class="col-lg-4 text-center">
-       <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+      <a href="{% url 'gallery:gallery' %}">
+       <img class="rounded-circle" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+       </a>
        <h2><a href="{% url 'gallery:gallery' %}">Gallery</a></h2>
        <p>The gallery page is a vibrant space where I share my hiking photos, capturing the beauty 
         and spirit of the Lake District, and invite others to share their own experiences and photos, 
         fostering a community of shared adventures and visual storytelling.</p>
      </div><!-- /.col-lg-4 -->
      <div class="col-lg-4 text-center">
-       <img class="rounded-pill mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+      <a href="{% url 'about:wainwrights' %}">
+       <img class="rounded-circle" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+       </a>
        <h2><a href="{% url 'about:wainwrights' %}">Wainwrights</a></h2>
        <p>This page is dedicated to showcasing the Wainwrights I've completed, providing detailed information about each, 
         including their height, the challenges faced, and my personal experiences, aiming to inspire and share the beauty 
@@ -81,36 +85,17 @@
      </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
  </div>
- 
  <br>
  <hr>
  <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
+<div class="container about-me">
     <div class="row">
         <div class="col-md-6">
             <img src="{{ about.profile_img.url }}" class="profile_img img-fluid" alt="{{ about.title }}">
         </div>
         <div class="col-md-6">
             <h2>{{ about.title }}</h2>
-            <p>{{ about.content | safe }}</p>
+            <p>{{ about.content }}</p>
             <p>{{ about.updated_on }}</p>
             <p>{{ carousel.title }}</p>
             <button class="btn btn-secondary"><a href="{% url 'contact:contact' %}" class="text-white">Contact Me</a></button>
@@ -120,9 +105,8 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-          <button class="btn btn-secondary float-right rounded-circle" 
-          style="background-color: rgba(0, 0, 0, 0.1);">
-          <a href="#top" class="text-white"><i class="fa fa-angle-up"></i></a></button> 
+          <button class="btn float-right rounded-circle page-top">
+          <a href="#top"><i class="fa fa-angle-up"></i></a></button> 
         </div>
     </div>
 </div>

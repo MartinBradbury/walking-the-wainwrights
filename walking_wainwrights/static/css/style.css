@@ -35,7 +35,7 @@ body {
 }
 
 /* Social Media Icons */
-.footer a p {
+.footer a i {
     color: #333;
     background-color: transparent;
     border: none;
@@ -45,7 +45,7 @@ body {
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
-    width: 30px;
+    width: 60px;
 }
 
 .footer a:hover {
@@ -136,7 +136,8 @@ width: 100%;
 /* Page Top Icon */
 
 .page-top {
-    border: 1px solid white;    
+    border: 1px solid white;
+    margin-bottom: 20px;    
 }
 
 .page-top:hover {
@@ -148,9 +149,23 @@ width: 100%;
     color:white;
 }
 
+/* Contact me Button */
+.contact-me {
+    border: 1px solid white;
+    color:white;
+    background-color: none;
+}
+
+.contact-me:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-me a {
+    text-decoration: none;
+}
+
 
 /* Like button Styling */
-
 .like-btn {
     color: red;
     border: none;
@@ -198,8 +213,8 @@ width: 100%;
 
 
 hr {
-    height: 4px; /* Optional: Adjust the height of the line */
-    background-color: white; /* Set the color to white */
+    height: 1px; /* Optional: Adjust the height of the line */
+    background-color: rgba(255, 255, 255, 0.397); /* Set the color to white */
     border: none; /* Remove the default border */
 }
 

@@ -73,7 +73,7 @@
        <p>The gallery page is a vibrant space where I share my hiking photos, capturing the beauty 
         and spirit of the Lake District, and invite others to share their own experiences and photos, 
         fostering a community of shared adventures and visual storytelling.</p>
-     </div><!-- /.col-lg-4 -->
+     </div>
      <div class="col-lg-4 text-center">
       <a href="{% url 'about:wainwrights' %}">
        <img class="rounded-circle" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
@@ -82,8 +82,8 @@
        <p>This page is dedicated to showcasing the Wainwrights I've completed, providing detailed information about each, 
         including their height, the challenges faced, and my personal experiences, aiming to inspire and share the beauty 
         and adventure of the Lake District with fellow hikers.</p>
-     </div><!-- /.col-lg-4 -->
-  </div><!-- /.row -->
+     </div>
+  </div>
  </div>
  <br>
  <hr>
@@ -98,7 +98,7 @@
             <p>{{ about.content }}</p>
             <p>{{ about.updated_on }}</p>
             <p>{{ carousel.title }}</p>
-            <button class="btn btn-secondary"><a href="{% url 'contact:contact' %}" class="text-white">Contact Me</a></button>
+            <button class="btn contact-me"><a href="{% url 'contact:contact' %}" class="text-white">Contact Me</a></button>
         </div>
     </div>
 </div>

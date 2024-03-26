@@ -20,9 +20,6 @@ body {
     opacity:0.5;
 }
 
-.wainwright-item {
-    margin-bottom: 40px;
-   }
 
 /* Footer Styling */
 .footer {
@@ -219,9 +216,6 @@ hr {
 }
 
 
-
-
-
 /* NAV BAR */
 .navbar {
     background-color: rgba(0, 0, 0, 0.8);
@@ -279,4 +273,24 @@ hr {
     position: sticky;
     top: 0; /* Distance from the top of the viewport */
     z-index: 1000; /* Ensures the navbar stays on top of other content */
+}
+
+
+/* Wainwrights */
+
+.completed-wainwrights {
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+
+.wainwright-row {
+    margin-bottom: 100px;
+}
+
+.wainwright-row img {
+    border-radius:25%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }

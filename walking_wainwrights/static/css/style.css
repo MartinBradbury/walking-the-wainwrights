@@ -35,7 +35,7 @@ body {
 }
 
 /* Social Media Icons */
-.footer a {
+.footer a p {
     color: #333;
     background-color: transparent;
     border: none;
@@ -81,7 +81,7 @@ body {
 }
 
 /* Copyright Section */
-.footer .text-dark {
+.copyright {
     color: #333;
 }
 

@@ -77,6 +77,7 @@
  
  <br>
  <hr>
+ <br>
 
 
 
@@ -105,16 +106,14 @@
             <p>{{ about.content | safe }}</p>
             <p>{{ about.updated_on }}</p>
             <p>{{ carousel.title }}</p>
+            <button class="btn btn-secondary"><a href="{% url 'contact:contact' %}" class="text-white">Contact Me</a></button>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <button class="btn btn-primary"><a href="{% url 'about:wainwrights' %}" class="text-white">Button</a></button>
-            <button class="btn btn-secondary"><a href="{% url 'contact:contact' %}" class="text-white">Contact Me</a></button>
-            <button class="btn btn-secondary"><a href="#top" class="text-white">Back to the top</a></button>
-            
+            <button class="btn btn-secondary float-right"><a href="#top" class="text-white">Back to the top</a></button>   
         </div>
     </div>
 </div>

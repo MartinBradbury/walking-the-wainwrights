@@ -16,7 +16,8 @@
         <div class="container">
           <div class="carousel-caption translucent-bg">
             <h1>Routes</h1>
-            <p>Come and take a look at the routes I have completed</p>
+            <p>My routes page is a comprehensive guide to the tracks I've taken, detailing the difficulty of each route and sharing 
+              my personal experiences, offering a unique insight into the challenges and rewards of hiking in the Lake District.</p>
             <!-- <p><a class="btn btn-lg btn-primary" href="{% url 'routes:routes' %}" role="button">Routes</a></p> -->
           </div>
         </div>
@@ -26,7 +27,9 @@
         <div class="container">
           <div class="carousel-caption translucent-bg">
             <h1>Photo Gallery</h1>
-            <p>Come take a look at photos I have taken or share your own</p>
+            <p>The gallery page is a vibrant space where I share my hiking photos, capturing the beauty 
+              and spirit of the Lake District, and invite others to share their own experiences and photos, 
+              fostering a community of shared adventures and visual storytelling.</p>
             <!-- <p><a class="btn btn-lg btn-primary" href="{% url 'gallery:gallery' %}" role="button">Gallery</a></p> -->
           </div>
         </div>
@@ -35,8 +38,10 @@
         <img class="third-slide img-fluid" src="{{ carousel.img_3.url }}" alt="Third slide">
         <div class="container">
           <div class="carousel-caption translucent-bg">
-            <h1>About Me</h1>
-            <p>Read about my journey as I am to complete all the Wainwrights</p>
+            <h1>My Journey</h1>
+            <p>Follow my journey of completing the Wainwrights is a testament to my love for the Lake District, 
+              showcasing the beauty and challenge of each fell, from the exhilarating ascents to the serene descents, 
+              all while sharing my experiences and insights to inspire and connect with fellow hikers.</p>
             <!-- <p><a class="btn btn-lg btn-primary" href="{% url 'about:about' %}" role="button">About</a></p> -->
           </div>
         </div>
@@ -57,19 +62,24 @@
      <div class="col-lg-4 text-center">
        <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
        <h2>Routes</h2>
-       <p>Explore the routes I have taken so far and the wainwrights achieved.</p>
+       <p>My routes page is a comprehensive guide to the tracks I've taken, detailing the difficulty of each route and sharing 
+        my personal experiences, offering a unique insight into the challenges and rewards of hiking in the Lake District.</p>
        <p><a class="btn btn-secondary" href="{% url 'routes:routes' %}" role="button">Register</a></p>
      </div><!-- /.col-lg-4 -->
      <div class="col-lg-4 text-center">
        <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
        <h2>Gallery</h2>
-       <p>Take a look at pictures I have taken or what other users have submitted.</p>
+       <p>The gallery page is a vibrant space where I share my hiking photos, capturing the beauty 
+        and spirit of the Lake District, and invite others to share their own experiences and photos, 
+        fostering a community of shared adventures and visual storytelling.</p>
        <p><a class="btn btn-secondary" href="{% url 'gallery:gallery' %}" role="button">Gallery</a></p>
      </div><!-- /.col-lg-4 -->
      <div class="col-lg-4 text-center">
-       <img class="rounded-circle mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
+       <img class="rounded-pill mx-auto d-block" src="https://res.cloudinary.com/dpjdwg51y/image/upload/v1711203023/p5zjackb05k3xmx0bv7s.jpg" alt="Generic placeholder image" width="140" height="140">
        <h2>Wainwrights</h2>
-       <p>Discover the Wainwrights I have completed so far.</p>
+       <p>This page is dedicated to showcasing the Wainwrights I've completed, providing detailed information about each, 
+        including their height, the challenges faced, and my personal experiences, aiming to inspire and share the beauty 
+        and adventure of the Lake District with fellow hikers.</p>
        <p><a class="btn btn-secondary" href="{% url 'about:wainwrights' %}" role="button">Wainwrights</a></p>
      </div><!-- /.col-lg-4 -->
   </div><!-- /.row -->
@@ -113,7 +123,9 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <button class="btn btn-secondary float-right"><a href="#top" class="text-white">Back to the top</a></button>   
+          <button class="btn btn-secondary float-right rounded-circle" 
+          style="background-color: rgba(0, 0, 0, 0.1);">
+          <a href="#top" class="text-white"><i class="fa fa-angle-up"></i></a></button> 
         </div>
     </div>
 </div>

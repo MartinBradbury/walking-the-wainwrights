@@ -2,24 +2,25 @@
 
 {% block content %}
 <div class="container">
-<h2 class="text-center">Completed Wainwrights</h2>
-<div class="container">
-    <div class="row">
-      {% for wainwright in wainwrights %}
-      <div class="col-9">
+ <hr>
+ <div class="row">
+    <h1 class="text-center text-light completed-wainwrights">Completed Wainwrights</h1>
+    {% for wainwright in wainwrights %}
+    <div class="row wainwright-row">
+      <div class="text-center col-md-6 text-light wainwright-info">
         <h3>{{ wainwright.name }}</h3>
-      </div>
-      <div class="col-4 wainwright-item d-flex align-items-center">       
-            <img src="{{ wainwright.wainwright_img.url }}" class="img-fluid" alt="{{ wainwright.name }}">
-      </div>
-      <div class="col-6">
+        <br>
         <p>{{ wainwright.description }}</p>
-        <p>Completed: {{ wainwright.get_completed_display }}</p>    
-        </div>
-        {% endfor %} 
+        <br>
+        <p>Completed: {{ wainwright.get_completed_display }}</p>
+      </div>
+      <div class="col-md-6 wainwright-img">
+        <img src="{{ wainwright.wainwright_img.url }}" class="img-fluid" alt="{{ wainwright.name }}">
+      </div>
     </div>
-  </div>
+    
+    {% endfor %}
+ </div>
+ <hr>
 </div>
 {% endblock %}
-
-

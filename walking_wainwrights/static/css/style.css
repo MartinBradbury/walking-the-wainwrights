@@ -322,13 +322,23 @@ hr {
 /* Gallery Container */
 .gallery-container h1,
 .gallery-container p {
+ color: black;
+}
+
+.gallery-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.image-details h1,
+.image-details p {
  color: white;
 }
 
-/* Gallery Comment Card */
-/* .gallery-card {
-        width: 50%;
-} */
+/* gallery grid */
+.gallery-grid {
+    margin-top: 80px;
+}
 
 #card-gallery {
     margin-bottom: 50px;

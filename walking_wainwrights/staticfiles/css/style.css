@@ -297,6 +297,16 @@ hr {
     margin-top: 20px;
 }
 
+/* Routes page */
+.route-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.route-card a:hover {
+    color: rgba(36, 34, 34, 0.569);
+}
+
 
 /* Pagination */
 

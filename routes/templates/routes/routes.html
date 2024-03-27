@@ -5,7 +5,7 @@
 <div class="row row-cols-1 row-cols-md-2 g-4">
     {% for route in page_object %}
     <div class="col-md-6 mb-4">
-        <div class="card">
+        <div class="card route-card">
             <a href="{% url 'routes:routes_detail' slug=route.slug %}">
             <img src="{{ route.feature_img.url }}" class="card-img-top" alt="...">
             </a>

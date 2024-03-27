@@ -29,7 +29,7 @@
                 <a href="?page={{ page_object.previous_page_number }}" class="btn btn-secondary text-light text-decoration-none">previous</a>
                 {% endif %}
                 <span>
-                    <button class="btn btn-secondary mr-2 ml-2" disabled>Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.</button>
+                    <button class="btn btn-secondary mr-2 ml-2 page-of" disabled>Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.</button>
                 </span>
                 {% if page_object.has_next %}
                 <a href="?page={{ page_object.next_page_number }}" class="btn btn-secondary text-light text-decoration-none">next</a>

@@ -1,42 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
-<br>
-<div class="container">
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    {% for route in page_object %}
-    <div class="col-md-6 mb-4">
-        <div class="card route-card">
-            <a href="{% url 'routes:routes_detail' slug=route.slug %}">
-            <img src="{{ route.feature_img.url }}" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body">
-                <a href="{% url 'routes:routes_detail' slug=route.slug %}">
-                    <h5 class="card-title text-center">{{ route.title }}</h5>
-                </a>
-                <p class="card-text">{{ route.snippet }} ... </p>
-                <p class="card-text"><small class="text-muted">{{ route.created_on }}</small></p>
-                <p class="card-text"><small class="text-muted">Created by: {{ route.author }}</small></p>
-            </div>
+<main>
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            {% for route in page_object %}
+            <article class="col-md-6 mb-4">
+                <div class="card route-card">
+                    <a href="{% url 'routes:routes_detail' slug=route.slug %}">
+                        <img src="{{ route.feature_img.url }}" class="card-img-top" alt="{{ route.title }}">
+                    </a>
+                    <div class="card-body">
+                        <a href="{% url 'routes:routes_detail' slug=route.slug %}">
+                            <h5 class="card-title text-center">{{ route.title }}</h5>
+                        </a>
+                        <p class="card-text">{{ route.snippet }} ... </p>
+                        <p class="card-text"><small class="text-muted">{{ route.created_on }}</small></p>
+                        <p class="card-text"><small class="text-muted">Created by: {{ route.author }}</small></p>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
         </div>
-    </div>
-    {% endfor %}
-</div>
 
-<div class="pagination text-center">
-    <div class="d-flex justify-content-between">
-        {% if page_object.has_previous %}
-            <a href="?page=1" class="btn btn-secondary text-light text-decoration-none mr-2">&laquo; first</a>
-            <a href="?page={{ page_object.previous_page_number }}" class="btn btn-secondary text-light text-decoration-none">previous</a>
-        {% endif %}
-        <span>
-            <button class="btn btn-secondary mr-2 ml-2" disabled>Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.</button>
-        </span>
-        {% if page_object.has_next %}
-        <a href="?page={{ page_object.next_page_number }}" class="btn btn-secondary text-light text-decoration-none">next</a>
-        <a href="?page={{ page_object.paginator.num_pages }}" class="btn btn-secondary text-light text-decoration-none ml-2">last &raquo;</a>
-        {% endif %}
-    </div>
-</div>
-</div>
-
+        <nav class="pagination text-center">
+            <div class="d-flex justify-content-between">
+                {% if page_object.has_previous %}
+                <a href="?page=1" class="btn btn-secondary text-light text-decoration-none mr-2">&laquo; first</a>
+                <a href="?page={{ page_object.previous_page_number }}" class="btn btn-secondary text-light text-decoration-none">previous</a>
+                {% endif %}
+                <span>
+                    <button class="btn btn-secondary mr-2 ml-2" disabled>Page {{ page_object.number }} of {{ page_object.paginator.num_pages }}.</button>
+                </span>
+                {% if page_object.has_next %}
+                <a href="?page={{ page_object.next_page_number }}" class="btn btn-secondary text-light text-decoration-none">next</a>
+                <a href="?page={{ page_object.paginator.num_pages }}" class="btn btn-secondary text-light text-decoration-none ml-2">last &raquo;</a>
+                {% endif %}
+            </div>
+        </nav>
+    </section>
+</main>
 {% endblock %}

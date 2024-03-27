@@ -2,24 +2,23 @@
 
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="container">
-{% if messages %}
-<div class="container">
-    <div class="alert alert-success" role="alert">
+<div class="container contact-form">
+    {% if messages %}
+    <div class="container">
+        <div class="alert alert-success" role="alert">
         {% for message in messages %}
         {{ message }}
         {% endfor %}
+        </div>
     </div>
+    {% endif %}
+    <p>This is the contact page</p>
+    <form method="post">
+        {{ collaborate_form | crispy }}
+        {% csrf_token %}
+        <button class="btn btn-secondary"
+        type="submit">Submit</button>
+    </form>
 </div>
-{% endif %}
-
-<p>This is the contact page</p>
-<form method="post">
-    {{ collaborate_form | crispy }}
-    {% csrf_token %}
-    <button class="btn btn-secondary"
-      type="submit">Submit</button>
-  </form>
-  </div>
 
 {% endblock %}

@@ -28,6 +28,7 @@ class Route(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     flagged = models.BooleanField()
     feature_img = CloudinaryField('image', default='placeholder')
+    route_video = models.URLField(blank=True, null=True)
     class Meta:
         ordering = ["-created_on"]
     def __str__(self):

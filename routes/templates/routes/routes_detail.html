@@ -45,7 +45,14 @@
     <p>{{ route.content }}</p>
     <p>{{ route.created_on }}</p>
     <p>Created by: {{ route.author }}</p>
-    
+    <br>
+    <hr>
+    <br>
+    <div class="iframe-container">
+        <iframe width="560" height="315" src="{{ route.route_video }}" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 </div>
 <br>
 <hr>
@@ -132,6 +139,7 @@
 
 </div>
 {% endblock content %}
+
 
 {% block extras %}
 <script src="{% static 'js/comment.js' %}"></script>

@@ -322,8 +322,11 @@ hr {
 .login-body {
     color:white;
     background-color: rgba(255, 255, 255, 0.692);
-    margin-bottom: 250px;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
 }
 
 .login-btn {

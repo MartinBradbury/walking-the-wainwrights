@@ -170,8 +170,10 @@ width: 100%;
     background-color: black;
 }
 
-
-
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.879);
+}
 
 /* Main Body Content About Page */
 .main-body {
@@ -313,4 +315,45 @@ hr {
 
 .pagination a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* comment box */
+
+/* Gallery Container */
+.gallery-container h1,
+.gallery-container p {
+ color: white;
+}
+
+/* Gallery Comment Card */
+/* .gallery-card {
+        width: 50%;
+} */
+
+#card-gallery {
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+/* Routes Container */
+
+.routes-container {
+    color:white;
+}
+
+/* Submit Button */
+#submitButton {
+    background-color: rgb(67, 116, 62);
+    color:white;  
+}
+
+#submitButton:hover {
+    background-color: rgb(50, 201, 62);
+    border: 2px solid black;
 }

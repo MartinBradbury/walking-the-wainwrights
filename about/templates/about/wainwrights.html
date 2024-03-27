@@ -5,10 +5,10 @@
     <h1 class="text-center text-light completed-wainwrights">Completed Wainwrights</h1>
 <div class="row row-cols-1 row-cols-md-2 g-4">
   {% for wainwright in wainwrights %}
-  <div class="col-md-6 mb-4">
-      <div class="card">
+  <div class="col-md-3 mb-4">
+      <div class="card wainwright-card">
           
-            <img src="{{ wainwright.wainwright_img.url }}" class="img-fluid" alt="{{ wainwright.name }}">
+            <img src="{{ wainwright.wainwright_img.url }}" class="img-fluid img-wainwright" alt="{{ wainwright.name }}">
     
           <div class="card-body">
             <h3>{{ wainwright.name }}</h3>

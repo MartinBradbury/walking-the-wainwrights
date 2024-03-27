@@ -177,6 +177,14 @@ footer {
     background-color: rgba(255, 255, 255, 0.879);
 }
 
+.wainwright-card {
+    min-height: 90vh;
+}
+
+.img-wainwright {
+    height: 250px;
+}
+
 /* Main Body Content About Page */
 .main-body {
     color: rgba(255, 255, 255, 0.692);
@@ -268,7 +276,7 @@ hr {
 /* Wainwrights */
 .completed-wainwrights,
 .wainwright-row {
-    margin: 50px 0 100px;
+    margin: 50px 0 50px;
 }
 
 .wainwright-row img {

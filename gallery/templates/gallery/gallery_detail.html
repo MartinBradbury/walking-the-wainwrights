@@ -17,93 +17,92 @@
 {% endif %}
 
 
-
-<div class="image-details">
-    <h1>{{ gallery.title }}</h1>
-    <img src="{{ gallery.feature_img }}" class="card-img-top" alt="...">
-    <p>{{ gallery.img_detail }}</p>
-    <p>{{ gallery.uploaded_at }}</p>
-    <p>Created by: {{ gallery.author }}</p>
-</div>
-
 <div class="container">
-    <div class="col-1">
-        <strong>
-            {% if user.is_authenticated %}
-            <form class="d-inline" action="{% url 'gallery:post-like' gallery.slug %}" method="POST">
-                {% csrf_token %}
-                {% if liked %}
-                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
-                {% else %}
-                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
-                {% endif %}
-            </form>
+    <br>
+    <h1 class="white-text">{{ gallery.title }}</h1>
+    <img src="{{ gallery.feature_img }}" class="card-img-top" alt="...">
+    <br>
+    <hr>
+    <strong>
+        {% if user.is_authenticated %}
+        <form class="d-inline" action="{% url 'gallery:post-like' gallery.slug %}" method="POST">
+            {% csrf_token %}
+            {% if liked %}
+            <button type="submit" class="like-btn" name="blogpost_id" value="{{post.slug}}"><i class="fas fa-heart fa-3x"></i></button>
             {% else %}
-            <span class="text-secondary"><i class="far fa-heart"></i></span>
-            <p>You must be logged in to like this post.</p>
+            <button type="submit" class="like-btn" name="blogpost_id" value="{{post.slug}}"><i class="far fa-heart fa-3x"></i></button>
             {% endif %}
-            
-            <span class="text-secondary">{{ gallery.number_of_likes }} </span>
-        </strong>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4 mt-3 ">
-            {% with comment_count as total_comments %}
-            <strong class="text-secondary"><i class="far fa-comments"></i>
-            {{ total_comments }}</strong>
-            {% endwith %}
-            <h3>Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                    <p class="font-weight-bold">
-                        {{ comment.author }}
-                        <span class="font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    <div id="comment{{ comment.id }}">
-                        {{ comment.body | linebreaks }}
+        </form>
+        {% else %}
+        <span class="like-btn"><i class="far fa-heart fa-3x"></i></span>
+        <p>You must be logged in to like this post.</p>
+        {% endif %}
+        <span class="text-secondary">{{ gallery.number_of_likes }} </span>
+    </strong>
+    <hr>
+    <br>
+    <p class="white-text">{{ gallery.img_detail }}</p>
+    <p class="white-text">{{ gallery.uploaded_at }}</p>
+    <p class="white-text">Created by: {{ gallery.author }}</p>
+    <br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 card mb-4 mt-3 ml-0">
+                {% with comment_count as total_comments %}
+                <strong class="text-secondary" style="font-size: 1.2em; color: #333;"><i class="far fa-comments"></i>
+                {{ total_comments }}</strong>
+                {% endwith %}
+                <h3 style="color: #444;">Comments:</h3>
+                <div class="card-body">
+                    {% for comment in comments %}
+                    <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}" style="border-bottom: 1px solid #eee;">
+                        <p class="font-weight-bold" style="margin-bottom: 0.5em;">
+                            {{ comment.author }}
+                            <span class="font-weight-normal" style="font-size: 0.9em;">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        <div id="comment{{ comment.id }}" style="margin-top: 0.5em;">
+                            {{ comment.body | linebreaks }}
+                        </div>
+                        {% if not comment.approved and comment.author == user %}
+                        <p class="approval" style="font-size: 0.8em; color: #f94141;">This comment is awaiting approval</p>
+                        {% endif %}
+                        {% if user.is_authenticated and comment.author == user %}
+                        <button class="btn btn-delete" comment_id="{{ comment.id }}" style="margin-right: 0.5em;">Delete</button>
+                        <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                        {% endif %}
                     </div>
-                    {% if not comment.approved and comment.author == user %}
-                    <p class="approval">This comment is awaiting approval</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-4 card mb-4 mt-3">
+                <div class="card-body">
+                    {% if commented %}
+                        <div class="alert alert-success" role="alert" style="margin-bottom: 1em;">
+                            Your comment is awaiting approval
+                        </div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                        <h3 style="color: #444;">Leave a comment:</h3>
+                        <p style="font-size: 0.9em; color: #666;">Posting as: {{ user.username }}</p>
+                        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button id="submitButton" type="submit" class="btn btn-signup btn-lg btn-secondary text-light text-decoration-none">Submit</button>
+                        </form>
+                    {% else %}
+                        <p style="font-size: 0.9em; color: #666;">You must be logged in to comment on this post.</p>
                     {% endif %}
-                    {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4 mt-3">
-          <div class="card-body">
-              {% if commented %}
-              <div class="alert alert-success" role="alert">
-                  Your comment is awaiting approval
-              </div>
-              {% else %}
-              {% if user.is_authenticated %}
-              <h3>Leave a comment:</h3>
-              <p>Posting as: {{ user.username }}</p>
-              <form id="commentForm" method="post" style="margin-top: 1.3em;">
-                  {{ comment_form | crispy }}
-                  {% csrf_token %}
-                  <!-- Button to trigger Cloudinary upload widget -->
-                  <button type="button" id="upload_widget_opener" class="btn btn-primary">Upload Image</button>
-                  <!-- Hidden input field to store the Cloudinary image URL -->
-                  <input type="hidden" id="id_feature_img" name="feature_img">
-                  <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
-              </form>
-              {% else %}
-              <p>You must be logged in to comment on this post.</p>
-              {% endif %}
-              {% endif %}
-          </div>
-      </div>
     </div>
-</div>
 
+</div>
 
 
 

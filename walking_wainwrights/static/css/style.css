@@ -318,6 +318,23 @@ hr {
 }
 
 /* comment box */
+/* Login styling */
+.login-body {
+    color:white;
+    background-color: rgba(255, 255, 255, 0.692);
+    margin-bottom: 250px;
+    margin-top: 100px;
+}
+
+.login-btn {
+    color:white;
+}
+
+.login-btn:hover {
+    color: green;
+}
+
+
 
 /* Gallery Container */
 .gallery-container h1,
@@ -325,15 +342,23 @@ hr {
  color: black;
 }
 
+.white-text {
+    color: white;
+}
+
+.signin-btn {
+    color:white;
+}
+
 .gallery-container a {
     text-decoration: none;
     color: black;
 }
 
-.image-details h1,
+/* .image-details h1,
 .image-details p {
  color: white;
-}
+} */
 
 /* gallery grid */
 .gallery-grid {
@@ -350,6 +375,7 @@ hr {
     margin-bottom: 100px;
     margin-top: 100px;
 }
+
 
 /* Routes Container */
 

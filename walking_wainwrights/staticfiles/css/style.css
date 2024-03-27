@@ -170,7 +170,10 @@ width: 100%;
     background-color: black;
 }
 
-
+/* Gallery Comment */
+.gallery-comment p {
+    color: black;
+}
 
 
 /* Main Body Content About Page */

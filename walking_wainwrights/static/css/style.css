@@ -195,7 +195,7 @@ width: 100%;
 }
 
 .main-body img {
-    box-shadow: 0 .5rem 6rem rgba(255, 255, 255, 0.377);
+    box-shadow: 0 0rem 4rem rgba(255, 255, 255, 0.8);
     margin: 0px;
     margin-bottom: 50px;
     border: 2px solid black;   
@@ -293,4 +293,24 @@ hr {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+}
+
+
+/* Pagination */
+
+.pagination {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+.pagination a {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.pagination a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }

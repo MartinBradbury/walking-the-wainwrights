@@ -170,11 +170,10 @@ width: 100%;
     background-color: black;
 }
 
-/* Gallery Comment */
-.gallery-comment p {
-    color: black;
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.879);
 }
-
 
 /* Main Body Content About Page */
 .main-body {
@@ -198,7 +197,7 @@ width: 100%;
 }
 
 .main-body img {
-    box-shadow: 0 .5rem 6rem rgba(255, 255, 255, 0.377);
+    box-shadow: 0 0rem 4rem rgba(255, 255, 255, 0.8);
     margin: 0px;
     margin-bottom: 50px;
     border: 2px solid black;   
@@ -296,4 +295,101 @@ hr {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+}
+
+
+/* Pagination */
+
+.pagination {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    
+}
+
+.pagination a {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.pagination a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* Login, register and logout styling */
+.login-body {
+    color:white;
+    background-color: rgba(255, 255, 255, 0.692);
+    margin-bottom: 250px;
+    margin-top: 100px;
+}
+
+.login-btn {
+    color:white;
+}
+
+.login-btn:hover {
+    color: green;
+}
+
+
+
+/* Gallery Container */
+.gallery-container h1,
+.gallery-container p {
+ color: black;
+}
+
+.white-text {
+    color: white;
+}
+
+.signin-btn {
+    color:white;
+}
+
+.gallery-container a {
+    text-decoration: none;
+    color: black;
+}
+
+/* .image-details h1,
+.image-details p {
+ color: white;
+} */
+
+/* gallery grid */
+.gallery-grid {
+    margin-top: 80px;
+}
+
+#card-gallery {
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+
+/* Routes Container */
+
+.routes-container {
+    color:white;
+}
+
+/* Submit Button */
+#submitButton {
+    background-color: rgb(67, 116, 62);
+    color:white;  
+}
+
+#submitButton:hover {
+    background-color: rgb(50, 201, 62);
+    border: 2px solid black;
 }

@@ -8,6 +8,12 @@ class GalleryAdmin(SummernoteModelAdmin):
     search_fields = ['title', 'author', 'flagged', 'status',]
     list_filter = ('status', 'flagged',)
 
+    def publish(self, request, queryset):
+        queryset.update(status=1)
+    publish.short_description = "Publish Image"
+
+    actions = [publish]
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('author', 'body', 'post', 'created_on', 'approved', 'flagged', 'feature_img')

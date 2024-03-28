@@ -20,8 +20,12 @@
     <br>
     <hr>
     <h6>
-        Difficulty Rating: {{ route.difficulty_icon }}{{ route.difficulty_rating }}/5
+        Difficulty Rating:
     </h6>
+    <p>
+        {{ route.difficulty_icon }}
+        {{ route.difficulty_rating }}/5
+    </p> 
     <br>
     <strong>
         {% if user.is_authenticated %}

@@ -131,6 +131,12 @@ footer {
     margin-top: 100px;
 }
 
+@media (max-width: 480px) { 
+    .journey-box {
+    margin-top: 30px;
+    }
+}
+
 .about-me {
     color: white;
 }

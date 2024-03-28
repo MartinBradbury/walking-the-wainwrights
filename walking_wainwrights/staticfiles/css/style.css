@@ -372,19 +372,29 @@ hr {
 /* Login, register and logout styling */
 .login-body {
     color: white;
-    background-color: rgba(255, 255, 255, 0.692);
-    margin: 50px 0;
+    background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
     min-height: 80vh;
 }
 
-.login-btn {
+.login-body h3 {
+    padding-top: 70px;
+}
+
+.login-btn, 
+.logout-btn,
+.signup-btn {
     color: white;
 }
 
-.login-btn:hover {
+.login-btn:hover,
+.signup-btn:hover {
     color: green;
+}
+
+.logout-btn:hover {
+    color: red;
 }
 
 /* Gallery Container */

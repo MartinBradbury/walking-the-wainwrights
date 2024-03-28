@@ -38,10 +38,10 @@
             {% endif %}
         </form>
         {% else %}
-        <span class="like-btn"><i class="far fa-heart fa-1x"></i></span>
-        <span class="text-secondary routes-counter">{{ route.number_of_likes }} </span>
         <p>You must be logged in to like this post.</p>
-        {% endif %}   
+        <span class="like-btn"><i class="far fa-heart fa-1x"></i></span>
+        {% endif %}  
+        <span class="text-secondary routes-counter">{{ route.number_of_likes }} </span> 
     </strong>
     <br>
     <hr>

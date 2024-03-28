@@ -178,6 +178,11 @@ footer {
     background-color: rgba(255, 255, 255, 0.879);
 }
 
+.route-card-image {
+    height: 550px;
+}
+
+
 .wainwright-card {
     min-height: 90vh;
 }

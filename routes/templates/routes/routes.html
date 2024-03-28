@@ -7,7 +7,7 @@
             <article class="col-md-6 mb-4">
                 <div class="card route-card">
                     <a href="{% url 'routes:routes_detail' slug=route.slug %}">
-                        <img src="{{ route.feature_img.url }}" class="card-img-top" alt="{{ route.title }}">
+                        <img src="{{ route.feature_img.url }}" class="card-img-top route-card-image" alt="{{ route.title }}">
                     </a>
                     <div class="card-body">
                         <a href="{% url 'routes:routes_detail' slug=route.slug %}">

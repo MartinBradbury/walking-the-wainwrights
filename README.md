@@ -118,7 +118,21 @@ The mid section of the homepage (about page) comprises of 3 cards with a heading
 ![About card links mobile](/readme_imgs/aboutcards/aboutcardm.png)
 ![About card links mobile](/readme_imgs/aboutcards/aboutcardm2.png)
 
+### About me content
 
+This section informs the user about my journey and my goals. It sets the tone for what the website is about and what they can expect. This section has a contact me button which links to a contact for page and a return to top of page button to save the user scrolling up.
+
+#### About me desktop
+![About me desktop](/readme_imgs/aboutme/aboutmed.png)
+
+#### About me Mobile
+![About me mobile](/readme_imgs/aboutme/aboutmem.png)
+
+#### Contact me button
+![Contact me button](/readme_imgs/aboutme/contact.png)
+
+#### Return to top button
+![Return to top](/readme_imgs/aboutme/uparrow.png)
 
 
 

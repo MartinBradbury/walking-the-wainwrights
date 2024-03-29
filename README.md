@@ -78,6 +78,28 @@ The purpose of my website is to share my personal journey and experiences of wal
 
 ##  Features:
 
+### Nav bar
+
+A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon is functional on tablets too upto and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are: 'About' - Which takes you to the homepage, 'Routes' - Navigates to the routes page, 'Gallery' - which navigates to the photo gallery page, 'Logout' - if already logged in, 'Register' - Navigates to signup page and 'Login' - Which enables an existing user to login. The title is also clickable and navigates to the about page. The Nav bar also indicated to the user if they are signed in or not.
+
+#### Desktop Navigation
+![Desktop navbar](/readme_imgs/navbar/navbarD.png)
+
+#### Mobile Navigation
+![Mobile burger navigation button](/readme_imgs/navbar/navbarmburger.png)
+![Mobile dropdown navigation menu](/readme_imgs/navbar/navbarmdrop.png)
+
+
+#### Signed in status
+![Not signed in](/readme_imgs/navbar/navbarnotlogged.png)
+![Signed in](/readme_imgs/navbar/navbarlogged.png)
+
+
+
+
+
+
+
 ##  Future Features:
 
 ##  Design:

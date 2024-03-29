@@ -409,13 +409,12 @@ The overall structure of the website was kept from initial inception of wirefram
 ![Gallery Detail Mobile](/readme_imgs/wireframes/gallerydetailm.png)
 
 
-
-
-
-
-
-
 ##  Database Schema:
+
+Here you can find my initial ERD (Entity Relationship Diagram). This got modified significantly as my project developed and I realised I had the opportunity to develop more features and fields to my databases.
+
+![ERD](/readme_imgs/ER%20Diagram.jpeg)
+
 
 ##  Technology Used:
 ### Languages and framework:

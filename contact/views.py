@@ -11,7 +11,7 @@ def contact_view(request):
             collaborate_form.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                "Collaboration request received! I endeavour \
+                "Message received! I endeavour \
                     to respond within 2 working days."
             )
 

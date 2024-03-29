@@ -14,6 +14,11 @@ body {
     color: rgb(194, 194, 194);
 }
 
+/* iframe */
+iframe {
+    border: none;
+}
+
 /* contact form */
 .contact-form {
     min-height: 80vh;

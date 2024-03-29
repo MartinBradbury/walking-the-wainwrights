@@ -16,7 +16,7 @@
 
 <div class="container routes-container">
     <h1>{{ route.title }}</h1>
-    <script type="text/javascript" src="{{ route.os_url }}"></script>
+    <script src="{{ route.os_url }}"></script>
     <br>
     <hr>
     <h6>
@@ -27,7 +27,7 @@
         {{ route.difficulty_rating }}/5
     </p> 
     <br>
-    <strong>
+    <div>
         {% if user.is_authenticated %}
         <form class="d-inline" action="{% url 'routes:post-like' route.slug %}" method="POST">
             {% csrf_token %}
@@ -42,7 +42,7 @@
         <span class="like-btn"><i class="far fa-heart fa-1x"></i></span>
         {% endif %}  
         <span class="text-secondary routes-counter">{{ route.number_of_likes }} </span> 
-    </strong>
+    </div>
     <br>
     <hr>
     <p class ="route-body">{{ route.content | safe }}</p>
@@ -53,7 +53,7 @@
     <br>
     <div class="iframe-container">
         <iframe width="560" height="315" src="{{ route.route_video }}" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>

@@ -323,16 +323,47 @@ The user login, logout and register page and styled for the purpose of the websi
 ![Register mobile](/readme_imgs/user/registerm.png)
 
 
+### Admin Control
 
+The Django Admin control enables the admin to approve images, and comments as well as ccreating routes and updating the carousel images on the about page easily. Filter methods have been added to easily see posts and actions have been added to enable to admin to approve or delete multiple posts quickly and easily. 
 
-### Admin
+#### Admin Control
+![Admin Control](/readme_imgs/admin/admin%20control.png)
 
+#### Admin filters
+![Admin filters](/readme_imgs/admin/adminfilters.png)
 
+#### Admin actions
+![Admin Actions](/readme_imgs/admin/adminactions.png)
 
 
 ##  Future Features:
 
+1.  Enable users to post their own routes that people can comment on.
+2.  Allow users to reply to specific comments in the comments section rather than them just appearing in a list.
+3.  Utalise the flagged function I put into the database so if the user deletes their account, all posts are deleted that are flgged for sensitive information but any other comments remain but only the username is removed. This will enable consistency when following convocations. 
+4.  All the wainwrights will be detailed in the wainwrights section with a key at the top of the page to go directly to the wainwright. 
+5.  The wainwright cards are clickable to reveal more information, map grid ref and interactive map.
+
+
 ##  Design:
+
+The design of the website was simple contrast of a dark black background and lighter white text. This enabled the cards to stand out. 
+
+
+### White Text: rgba(255, 255, 255, 0.692);
+![Text color](/readme_imgs/Color/text.png)
+
+### Black: Black
+![Background](/readme_imgs/Color/black.png)
+
+### Hover: rgba(255, 255, 255, 0.2);
+![Hover Color](/readme_imgs/Color/hover.png)
+
+### Card Background colour: rgba(255, 255, 255, 0.879);
+![Card background](/readme_imgs/Color/card.png)
+
+
 
 ##  Wireframes:
 

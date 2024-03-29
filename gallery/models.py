@@ -7,6 +7,7 @@ from django.template.defaultfilters import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Gallery(models.Model):
     title = models.CharField(max_length=255, blank=True)
     slug = models.SlugField(max_length=100)
@@ -21,15 +22,19 @@ class Gallery(models.Model):
 
     class Meta:
         ordering = ["-uploaded_at"]
+
     def __str__(self):
         return self.title
+
     def number_of_likes(self):
         return self.likes.count()
+
     def save(self, *args, **kwargs):
         if self.title:
             self.slug = slugify(self.title)
         super(Gallery, self).save(*args, **kwargs)
-        
+
+
 class Comment(models.Model):
     post = models.ForeignKey(Gallery, on_delete=models.CASCADE,
                              related_name="comments")

@@ -7,9 +7,11 @@ from django_summernote.admin import SummernoteModelAdmin
 class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
+
 @admin.register(Wainwright)
 class WainwrightAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
+
 
 @admin.register(Carousel)
 class CarouselAdmin(admin.ModelAdmin):

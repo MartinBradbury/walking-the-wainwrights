@@ -156,7 +156,21 @@ This section offers the user the opportunity to send me a message directly. All 
 #### Contact me mobile
 ![Contact me Mobile](/readme_imgs/contact/contactfm.png)
 
+### Routes page
 
+The routes page is created by the admin and displays the different routes I have completed. Each route is displayed in a clickable card which takes them to the specific page for that route. The route card has a image of the route taken, the heading for the route and a snippet of the description of the route. It also has the date the route was posted and by who. On desktop the route cards are displayed in pairs with a max of 4 cards per page. On mobile devices the route cards will be displayed in a column with a max of 4 per page and the most recent on top. Pagination is used on both mobile and desktop to navigate between pages of the route cards and the most recent route will be displayed first. 
+
+#### Route cards Desktop
+![Route card Desktop](/readme_imgs/route/routed.png)
+
+#### Route cards Mobile
+![Route card Mobile](/readme_imgs/route/routem.png)
+
+#### Pagination Desktop
+![Pagination Desktop](/readme_imgs/route/paginationd.png)
+
+#### Pagination Mobile
+![Pagination Desktop](/readme_imgs/route/paginationm.png)
 
 
 

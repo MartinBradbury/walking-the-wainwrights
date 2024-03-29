@@ -75,3 +75,66 @@ The purpose of my website is to share my personal journey and experiences of wal
     -   Read other users comments and view their uploaded photos.
     -   Edit comments I have made, route blogs made and images uploaded.
     -   Delete my route posts, comments and images.
+
+##  Features:
+
+##  Future Features:
+
+##  Design:
+
+##  Wireframes:
+
+##  Database Schema:
+
+##  Technology Used:
+### Languages and framework:
+
+- [HTML5](https://developer.mozilla.org/en-US/docs/Learn/HTML "link to html mozilla documentation")
+  was used to create content and structure
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS "link to css mozilla documentation")
+  was used to add custom styles
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript "link to javascript mozilla documentation") was used to dynamically reset the comment form if the reset button was clicked and to show a modal when the edit comment button was clicked
+- [Django](https://www.djangoproject.com/ "link to django docs homepage") was the python framework used to develop the site
+
+### Database:
+
+- [PostgreSQL from ElephantSQL](https://www.elephantsql.com/ "link to elephantSQL") was used as the PostgreSQL database for this project.
+
+### Technologies and tools:
+
+- [GitPod Code](https://www.gitpod.io/ "link to Gitpod webpage") was used as the ide for this whole project.
+- [Cloudinary](https://cloudinary.com/ "link to cloudinary homepage") was used to host images.
+- [GitHub](https://github.com/ "link to github webpage") was used to store the code files, README files and assets
+- [Git](https://git-scm.com/ "link to official git website") was used as a version control software to commit and push the code to the GitHub repository
+- [Heroku](https://id.heroku.com/login "link to Heroku login") was used to deploy the project
+- [lucidcharts](https://www.lucidchart.com/pages/ "Link to lucidcharts") was used to make a diagram of the database schema and entity relationship diagrams.
+- [Prettier](https://prettier.io/ "link to official prettier website") was used as the default formatter in Gitpod IDE, for html and css files.
+- [Bootstrap](https://getbootstrap.com/ "link to official bootstrap website") was used to quickly layout, position and size critical website features
+- [Balsamiq](https://balsamiq.com/wireframes/ "link to official balsamiq website") was used in early planning to map out wireframes
+- [Google Fonts](https://fonts.google.com/ "link to official google fonts website") was used to import fonts
+- [Font Awesome](https://fontawesome.com/ "link to official font awesome website") was used for all icons
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/ "Link to official chrome developer tools website") was used for lighthouse testing, debugging and consistently checking responsiveness
+- [W3C Markup Validator](https://validator.w3.org/ "link to official html validator") was used to validate all live html
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/ "link to official css validator") was used to validate CSS code
+- [JS Hint](https://jshint.com/ "link to official javascript validator") was used to validate JavaScript code
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/ "link to official python validator") was used to validate all python code
+- [Django Summernote](https://pypi.org/project/django-summernote/ "link to official summernote website") was used. This is a rich text editor plugin for Django
+- [Django Crispy Forms](https://pypi.org/project/django-crispy-forms/ "link to official crispy forms website") were used throughout the project to quickly create forms
+
+## Testing:
+### HTML Validation
+### CSS Validation
+### JS Validation
+### Python Validation
+
+### User Testing:
+
+### bugs
+
+##  Deployment:
+
+##  Credits
+### Code
+### Images
+
+## Acknowledgements

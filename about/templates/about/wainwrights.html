@@ -3,23 +3,23 @@
 {% block content %}
  <div class="row ml-3 mr-3">
     <h1 class="text-center text-light completed-wainwrights">Completed Wainwrights</h1>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  {% for wainwright in wainwrights %}
-  <div class="col-md-3 mb-4">
-      <div class="card wainwright-card">
-          
-            <img src="{{ wainwright.wainwright_img.url }}" class="img-fluid img-wainwright" alt="{{ wainwright.name }}">
-    
-          <div class="card-body">
-            <h3>{{ wainwright.name }}</h3>
-            <br>
-            <p>{{ wainwright.description }}</p>
-            <br>
-            <p>Completed: {{ wainwright.get_completed_display }}</p>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      {% for wainwright in wainwrights %}
+      <div class="col-md-3 mb-4">
+          <div class="card wainwright-card">
+              
+                <img src="{{ wainwright.wainwright_img.url }}" class="img-fluid img-wainwright" alt="{{ wainwright.name }}">
+        
+              <div class="card-body">
+                <h3>{{ wainwright.name }}</h3>
+                <br>
+                <p>{{ wainwright.description }}</p>
+                <br>
+                <p>Completed: {{ wainwright.get_completed_display }}</p>
+              </div>
           </div>
       </div>
-  </div>
-  {% endfor %}
-
-
-  {% endblock %}
+      {% endfor %}
+    </div>
+ </div> 
+{% endblock %}

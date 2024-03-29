@@ -463,7 +463,7 @@ All HTML pages were tested with the [W3C HTML Validator](https://validator.w3.or
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------  | ------ |
 | about                  |  <details><summary>About Page</summary><img src="./readme_imgs/html/about.png"></details>                                                | PASS   |
 | gallery                |  <details><summary>Gallery Page</summary><img src="./readme_imgs/html/gallery.png"></details>                                            | PASS   |
-| wainwright             |  <details><summary>Wainwright Page</summary><img src=""></details>                                                                       | PASS   |
+| wainwright             |  <details><summary>Wainwright Page</summary><img src="./readme_imgs/html/wainwrights.png"></details>                                     | PASS   |
 | Routes                 |  <details><summary>Routes</summary><img src="./readme_imgs/html/Routes.png"></details>                                                   | PASS   |
 | Gallery Detail         |  <details><summary>Gallery Detail</summary><img src="./readme_imgs/html/gallery detail.png"></details>                                   | PASS   |
 | Route Details          |  <details><summary>Register</summary><img src="./readme_imgs/html/routes details.png"></details>                                         | PASS   |
@@ -472,11 +472,32 @@ All HTML pages were tested with the [W3C HTML Validator](https://validator.w3.or
 | sign up page           |  <details><summary>Register</summary><img src="./readme_imgs/html/signup.png"></details>                                                 | PASS   |
 
 
-
-
-
 ### CSS Validation
+
+Custom CSS was put through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+#### CSS Result
+
+![CSS validation](/readme_imgs/css/CSS%20validation.png)
+Pass
+
 ### JS Validation
+
+JavaScript code in the comment.js and image.js file was put through the [JSHint Validator](https://jshint.com/).
+
+#### JS Result
+
+The js code for both files passed.
+
+#### Comment.js
+![JS validation comments](/readme_imgs/js/js%20comment.png)
+
+#### Images.js
+![JS Validation images](/readme_imgs/js/js%20image.png)
+
+
+
+
 ### Python Validation
 
 ### User Testing:

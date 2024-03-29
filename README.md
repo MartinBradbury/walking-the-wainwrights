@@ -452,7 +452,29 @@ Here you can find my initial ERD (Entity Relationship Diagram). This got modifie
 - [Django Crispy Forms](https://pypi.org/project/django-crispy-forms/ "link to official crispy forms website") were used throughout the project to quickly create forms
 
 ## Testing:
+
 ### HTML Validation
+
+All HTML pages were tested with the [W3C HTML Validator](https://validator.w3.org/).
+
+#### HTML Result
+
+| page                   | validator                                                                                                                                | result |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------  | ------ |
+| about                  |  <details><summary>About Page</summary><img src="./readme_imgs/html/about.png"></details>                                                | PASS   |
+| gallery                |  <details><summary>Gallery Page</summary><img src="./readme_imgs/html/gallery.png"></details>                                            | PASS   |
+| wainwright             |  <details><summary>Wainwright Page</summary><img src=""></details>                                                                       | PASS   |
+| Routes                 |  <details><summary>Routes</summary><img src="./readme_imgs/html/Routes.png"></details>                                                   | PASS   |
+| Gallery Detail         |  <details><summary>Gallery Detail</summary><img src="./readme_imgs/html/gallery detail.png"></details>                                   | PASS   |
+| Route Details          |  <details><summary>Register</summary><img src="./readme_imgs/html/routes details.png"></details>                                         | PASS   |
+| sign in page           |  <details><summary>Sign In</summary><img src="./readme_imgs/html/login.png"></details>                                                   | PASS   |
+| logout page            |  <details><summary>Sign Out</summary><img src="./readme_imgs/html/logout.png"></details>                                                 | PASS   |
+| sign up page           |  <details><summary>Register</summary><img src="./readme_imgs/html/signup.png"></details>                                                 | PASS   |
+
+
+
+
+
 ### CSS Validation
 ### JS Validation
 ### Python Validation

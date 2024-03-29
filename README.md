@@ -94,6 +94,30 @@ A fully responsive navigation bar is in has been used. The main focus was on a '
 ![Not signed in](/readme_imgs/navbar/navbarnotlogged.png)
 ![Signed in](/readme_imgs/navbar/navbarlogged.png)
 
+### Hero image Carousel
+
+The hero image is a carousel of 3 images the site admin has the opportunity to change at any point in django admin. The carousel can rotates each image on all devices or can be manually invoked by clicking the left or right arrow.
+
+#### Carousel Desktop
+![Carousel images Desktop](/readme_imgs/Carousel/carouseld.png)
+
+#### Carousel Mobile
+![Carousel images mobile](/readme_imgs/Carousel/carouselm.png)
+
+#### Admin control of carousel images
+![Admin Control of Carousel](/readme_imgs/Carousel/Carouseladmin.png)
+
+### About me cards
+
+The mid section of the homepage (about page) comprises of 3 cards with a heading a description. These cards inform the user what they will find in each of these sections and help to draw their attention using imigary of what they are linkely to find in each section. The whole card is clickable and links to the corrospoiding page in the website.
+
+#### About cards Desktop
+![About card links desktop](/readme_imgs/aboutcards/aboutcardsd.png)
+
+#### About cards Mobile
+![About card links mobile](/readme_imgs/aboutcards/aboutcardm.png)
+![About card links mobile](/readme_imgs/aboutcards/aboutcardm2.png)
+
 
 
 

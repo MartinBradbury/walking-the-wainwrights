@@ -300,6 +300,30 @@ The wainwrights page is a simple page that just details all the Wainwrights I ha
 ![Wainwrights mobile](/readme_imgs/wainwrights/wainwrightsm.png)
 
 
+### Login, Logout, Register
+
+The user login, logout and register page and styled for the purpose of the website but have all the same functionalite that Django Auth brings. Users are required to create an accout with a password that meets the minimim requirements. All fileds need to be completed with the exception of the email field. The Logout form logs the user out of that session. The login for asks for the users username and password. After successfully logging in, logging out or registering the users are take to the about page.
+
+#### Login Desktop
+![Login Page desktop](/readme_imgs/user/logind.png)
+
+#### Login Mobile
+![Login Page mobile](/readme_imgs/user/loginm.png)
+
+#### Logout Desktop
+![Logout Desktop](/readme_imgs/user/logoutd.png)
+
+#### Logout Mobile
+![logout mobile](/readme_imgs/user/logoutm.png)
+
+#### Register desktop
+![Register desktop](/readme_imgs/user/registerd.png)
+
+#### Register mobile
+![Register mobile](/readme_imgs/user/registerm.png)
+
+
+
 
 ### Admin
 

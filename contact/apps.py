@@ -1,6 +1,9 @@
-from django.apps import AppConfig
+from django.contrib import admin
+from .models import CollaborateRequest
+from django_summernote.admin import SummernoteModelAdmin
 
 
-class ContactConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'contact'
+@admin.register(CollaborateRequest)
+class CollaborateRequestAdmin(admin.ModelAdmin):
+
+    list_display = ('message', 'read',)

@@ -26,28 +26,25 @@ class GalleryView(View):
             gallery = gallery_form.save(commit=False)
             gallery.author = request.user
             gallery.feature_img = request.POST.get('feature_img')
-            gallery.save() # Save the gallery item
+            gallery.save()
             messages.success(request, 'Gallery uploaded successfully!')
-            
-            # Re-fetch the feaure_img and paginate them to get the updated page_object
             feature_img = Gallery.objects.filter(status=1)
             paginator = Paginator(feature_img, 4)
             page_number = request.GET.get('page')
             page_object = paginator.get_page(page_number)
-            
+
             return render(request, 'gallery/gallery.html', {
                 'page_object': page_object,
                 'gallery_form': GalleryForm(),
             })
         else:
-            messages.error(request, 'Error uploading gallery. Please try again.')
+            messages.error(
+                request, 'Error uploading gallery. Please try again.'
+            )
             return render(request, 'gallery/gallery.html', {
                 'page_object': page_object,
                 'gallery_form': GalleryForm(),
             })
-
-
-
 
 
 class GalleryDetail(View):
@@ -79,9 +76,13 @@ class GalleryDetail(View):
             comment.post = gallery
             comment.feature_img = request.POST.get('feature_img')
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment submitted!')
+            messages.add_message(
+                request, messages.SUCCESS, 'Comment submitted!'
+            )
         else:
-            messages.add_message(request, messages.ERROR, 'Error submitting comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error submitting comment!'
+            )
 
         return render(request, 'gallery/gallery_detail.html', {
             'gallery': gallery,
@@ -95,6 +96,7 @@ class GalleryDetail(View):
     def get_gallery(self, slug):
         return get_object_or_404(Gallery, slug=slug)
 
+
 class PostLike(View):
     def post(self, request, slug):
         gallery = get_object_or_404(Gallery, slug=slug)
@@ -102,11 +104,16 @@ class PostLike(View):
             gallery.likes.remove(request.user)
         else:
             gallery.likes.add(request.user)
-        return HttpResponseRedirect(reverse('gallery:gallery_detail', args=[slug]))
+        return HttpResponseRedirect(
+            reverse('gallery:gallery_detail', args=[slug])
+        )
+
 
 def comment_edit(request, slug, comment_id):
     if request.method == "POST":
-        gallery = get_object_or_404(Gallery.objects.filter(status=1), slug=slug)
+        gallery = get_object_or_404(
+            Gallery.objects.filter(status=1), slug=slug
+        )
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
@@ -117,9 +124,12 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!'
+            )
 
     return HttpResponseRedirect(reverse('gallery:gallery_detail', args=[slug]))
+
 
 def comment_delete(request, slug, comment_id):
     gallery = get_object_or_404(Gallery.objects.filter(status=1), slug=slug)
@@ -129,6 +139,8 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!'
+        )
 
     return HttpResponseRedirect(reverse('gallery:gallery_detail', args=[slug]))

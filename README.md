@@ -500,6 +500,37 @@ The js code for both files passed.
 
 ### Python Validation
 
+All python code was put through the [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+#### Python Result
+
+| File            | Validator                                                                                                                | Result |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------ | ------ |
+| About admin     |  <details><summary>About Models</summary><img src="./readme_imgs/linter/CI Linter about admin.png"></details>            | PASS   |
+| About apps      |  <details><summary>About Views</summary><img src="./readme_imgs/linter/CI Linter About Apps.png"></details>              | PASS   |
+| About model     |  <details><summary>About Forms</summary><img src="./readme_imgs/linter/CI Linter About model.png"></details>             | PASS   |
+| About urls      |  <details><summary>About urls</summary><img src="./readme_imgs/linter/CI Linter About urls.png"></details>               | PASS   |
+| About views     |  <details><summary>About Admin</summary><img src="./readme_imgs/linter/CI Linter About Views.png"></details>             | PASS   |
+| Contact admin   |  <details><summary>Blog Models</summary><img src="./readme_imgs/linter/CI Linter contact admin.png"></details>           | PASS   |
+| Contact forms   |  <details><summary>Blog Views</summary><img src="./readme_imgs/linter/CI Linter contact forms.png"></details>            | PASS   |
+| Contact models  |  <details><summary>Blog Forms</summary><img src="./readme_imgs/linter/CI Linter Contact models.png"></details>           | PASS   |
+| Contact URLs    |  <details><summary>Blog urls</summary><img src="./readme_imgs/linter/CI linter contact urls.png"></details>              | PASS   |
+| Contact Views   |  <details><summary>Blog Admin</summary><img src="./readme_imgs/linter/CI Linter contact views.png"></details>            | PASS   |
+| Gallery admin   |  <details><summary>Makeover Models</summary><img src="./readme_imgs/linter/CI Linter Gallery Admin.png"></details>       | PASS   |
+| Gallery Apps    |  <details><summary>Makeover Views</summary><img src="./readme_imgs/linter/CI Linter Gallery apps.png"></details>         | PASS   |
+| Gallery Model   |  <details><summary>Makeover Forms</summary><img src="./readme_imgs/linter/CI Linter Gallery models.png"></details>       | PASS   |
+| Gallery Urls    |  <details><summary>Makeover urls</summary><img src="./readme_imgs/linter/CI Linter gallery urls.png"></details>          | PASS   |
+| Gallery Forms   |  <details><summary>Makeover Admin</summary><img src="./readme_imgs/linter/CI Linter gallery forms.png"></details>        | PASS   |
+| Gallery View    |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter gallery views.png></details>               | PASS   |
+| Routes admin    |  <details><summary>Makeover Models</summary><img src="./readme_imgs/linter/CI Linter routes admin.png"></details>        | PASS   |
+| Routes Apps     |  <details><summary>Makeover Views</summary><img src="./readme_imgs/linter/CI Linter routes apps.png"></details>          | PASS   |
+| Routes Model    |  <details><summary>Makeover Forms</summary><img src="./readme_imgs/linter/CI Linter Routes models.png"></details>        | PASS   |
+| Routes Urls     |  <details><summary>Makeover urls</summary><img src="./readme_imgs/linter/CI Linter routes urls.png"></details>           | PASS   |
+| Routes Forms    |  <details><summary>Makeover Admin</summary><img src="./readme_imgs/linter/CI Linter routes forms.png"></details>         | PASS   |
+| Routes View     |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter routes views.png"></details>               | PASS   |
+| Settings        |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter Settings.png"></details>                   | PASS   |
+
+
 ### User Testing:
 
 ### bugs

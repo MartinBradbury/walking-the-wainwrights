@@ -85,29 +85,29 @@
   </div>
   <hr>
  </div>
-<div class="container about-me" id="my-journey">
+ <div class="container about-me" id="my-journey">
   <div class="row">
-    <div class="col-md-6">
-      <img src="{{ about.profile_img.url }}" class="profile_img img-fluid" alt="{{ about.title }}">
-    </div>
-    <div class="col-md-6 journey-box">
-      <h2>{{ about.title }}</h2>
-      <br>
-      <p>{{ about.content }}</p>
-      <p>{{ about.updated_on }}</p>
-      <p>{{ carousel.title }}</p>
-      <button class="btn contact-me"><a href="{% url 'contact:contact' %}" class="text-white">Contact Me</a></button>
-    </div>
+     <div class="col-md-6">
+       <img src="{{ about.profile_img.url }}" class="profile_img img-fluid" alt="{{ about.title }}">
+     </div>
+     <div class="col-md-6 journey-box">
+       <h2>{{ about.title }}</h2>
+       <br>
+       <p>{{ about.content }}</p>
+       <p>{{ about.updated_on }}</p>
+       <p>{{ carousel.title }}</p>
+       <a href="{% url 'contact:contact' %}" class="btn contact-me text-white">Contact Me</a>
+     </div>
   </div>
-</div>
-<div class="container">
+ </div>
+ <div class="container">
   <div class="row">
-    <div class="col-12">
-      <button class="btn float-right rounded-circle page-top">
-        <a href="#top"><i class="fa fa-angle-up"></i></a>
-      </button>
-    </div>
+     <div class="col-12">
+       <a href="#top" class="btn float-right rounded-circle page-top">
+         <i class="fa fa-angle-up"></i>
+       </a>
+     </div>
   </div>
-</div>
-
+ </div>
+ 
 {% endblock content %}

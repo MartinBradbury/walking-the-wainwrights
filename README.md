@@ -151,7 +151,7 @@ This section offers the user the opportunity to send me a message directly. All 
 #### Contact me desktop
 ![Contact me Desktop](/readme_imgs/contact/contactfd.png)
 ![Contact me Desktop must complete field](/readme_imgs/contact/contactfdcomplete.png)
-![Contact me Desktop django message](/readme_imgs/contact/contactfdcomplete.png)
+![Contact me Desktop django message](/readme_imgs/contact/contactfdmessage.png)
 
 #### Contact me mobile
 ![Contact me Mobile](/readme_imgs/contact/contactfm.png)

@@ -289,9 +289,17 @@ Mobile:
 ![Upload Success](/readme_imgs/gallery/uploadsuccess.png)
 
 
-
-
 ### Wainwrights
+
+The wainwrights page is a simple page that just details all the Wainwrights I have completed. It comprises of cards 4 per row on desktop and stacked vertically on mobile. Each card has the image of the Wainright and a description of the Wainright with its height. The card also indentifies if I have completed this Wainwright or not. These cards are not clickable. 
+
+#### Wainwrights Desktop
+![Wainwrights desktop](/readme_imgs/wainwrights/wainwrightsd.png)
+
+#### Wainwrights Mobile
+![Wainwrights mobile](/readme_imgs/wainwrights/wainwrightsm.png)
+
+
 
 ### Admin
 

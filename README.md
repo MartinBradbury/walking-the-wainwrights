@@ -172,6 +172,73 @@ The routes page is created by the admin and displays the different routes I have
 #### Pagination Mobile
 ![Pagination Desktop](/readme_imgs/route/paginationm.png)
 
+### Route detail page
+
+When the user selects a route and clicks on the card they are taken to the routes detail page. This page highlights the route title at the top and below has a fully interactive os map which has been imported from Outdooractive with the route I have taken. This map can be zoomed and tracked around to the users desire. There is a brief summary of the route statistics on the map with a button offering the user to learn more. 
+
+#### Interactive map
+![Interactive map](/readme_imgs/Routedetail/mapd.png)
+
+#### Interactive map zoomed
+![Interactive map zoomed](/readme_imgs/Routedetail/mapdz.png)
+
+Once clicked a pop up will appear with all the details and statistics of the hike. It will give the user a larger interactive map, a 3D generated video of the route taken and statitics. It will also give the user the opportunity to download the GPX, KML, FIT file of my route so they are able to navigate from it from any navigation device they may have. This pop up can be exited by clicking the cross on the top right corner. 
+
+#### Learn more page
+![Learn More](/readme_imgs/Routedetail/mapdetail.png)
+
+#### deeper statistics
+![statistics](/readme_imgs/Routedetail/mapstats.png)
+
+#### Download navigation files
+![Download file](/readme_imgs/Routedetail/mapdownlaod.png)
+![Download file](/readme_imgs/Routedetail/mapdownload2.png)
+
+#### Close popup
+![Close popup](/readme_imgs/Routedetail/mapdexit.png)
+
+
+#### Difficulty rating
+
+Back on the route detail page there is a difficulty rating where fontawesome icons have been used and a score is given for the difficulty. 
+![Difficulty Rating](/readme_imgs/Routedetail/routedifficulty.png)
+
+#### Like button and counter
+
+There is a like button and like counter. The like button can only be interacted with if the user is logged in. 
+![Like button](/readme_imgs/Routedetail/like%20button.png)
+![Like button liked](/readme_imgs/Routedetail/likebuttonliked.png)
+![Like button must be logged in](/readme_imgs/Routedetail/likebuttonneedlogin.png)
+
+#### Hike desctiption
+There is a description of my experiences on this particular hike. 
+![Hike Description](/readme_imgs/Routedetail/routedescription.png)
+
+#### 3D Hike Video
+
+There is an embeded youtive video of a 3D representation of my hike. 
+![3D Hike Video](/readme_imgs/Routedetail/3dvideo.png)
+![3D Hike Video](/readme_imgs/Routedetail/3dvideoplaying.png)
+
+#### Comment form
+
+There is a comment form where the user is able to leave a message about this particular route. The user must be logged in to comment. 
+![Comment form](/readme_imgs/Routedetail/commentform.png)
+![Comment message accepted](/readme_imgs/Routedetail/commentwaiting.png)
+![Comment must be logged in](/readme_imgs/Routedetail/commentformneedlogin.png)
+
+When commented the user will recieve a message saying their comment is waiting approval and they will see a faded message. They are able to edit this message and / or delete the message. When the select edit the origional message will appear in the body and the button will change to update. Django messages will inform the user when these tasks have been completed successfully. 
+
+![Comment Edit](/readme_imgs/Routedetail/Commenteditbody.png)
+![Comment Edit message](/readme_imgs/Routedetail/editcomment.png)
+![Comment Delete popup](/readme_imgs/Routedetail/deletecomment.png)
+![Comment Delete message](/readme_imgs/Routedetail/deleted%20message.png)
+
+#### Message counter and Approved messages
+
+There is a message counter that shows how many messages there are on this route of which have been approved. Approved messages appear in black text and detail the author and time posted. 
+![Comment Counter and approved](/readme_imgs/Routedetail/commentcounterapproved.png)
+
 
 
 

@@ -80,7 +80,7 @@ The purpose of my website is to share my personal journey and experiences of wal
 
 ### Nav bar
 
-A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon is functional on tablets too upto and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are: 'About' - Which takes you to the homepage, 'Routes' - Navigates to the routes page, 'Gallery' - which navigates to the photo gallery page, 'Logout' - if already logged in, 'Register' - Navigates to signup page and 'Login' - Which enables an existing user to login. The title is also clickable and navigates to the about page. The Nav bar also indicated to the user if they are signed in or not.
+A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon is functional on tablets too upto and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are: 'About' - Which takes you to the homepage, 'Routes' - Navigates to the routes page, 'Gallery' - which navigates to the photo gallery page, 'Logout' - if already logged in, 'Register' - Navigates to signup page and 'Login' - Which enables an existing user to login. The title is also clickable and navigates to the about page. The Nav bar also indicated to the user if they are signed in or not and remain sticky to the top of the window.
 
 #### Desktop Navigation
 ![Desktop navbar](/readme_imgs/navbar/navbarD.png)
@@ -133,6 +133,29 @@ This section informs the user about my journey and my goals. It sets the tone fo
 
 #### Return to top button
 ![Return to top](/readme_imgs/aboutme/uparrow.png)
+
+### Social meadia footer
+
+The footer has links to social media where users are able to interact with me further. All the buttons are clickable and open the social media in a new window or tab.
+
+#### Social media footer desktop
+![Social media footer desktop](/readme_imgs/footer/sociald.png)
+
+#### Social media footer mobile
+![Social media footer mobile](/readme_imgs/footer/socialm.png)
+
+### Contact me
+
+This section offers the user the opportunity to send me a message directly. All fields are required for the user to send me a message and the user is informed when the message has been sent successfully with a django message. These features work on all device sizes and are fully responsive. 
+
+#### Contact me desktop
+![Contact me Desktop](/readme_imgs/contact/contactfd.png)
+![Contact me Desktop must complete field](/readme_imgs/contact/contactfdcomplete.png)
+![Contact me Desktop django message](/readme_imgs/contact/contactfdcomplete.png)
+
+#### Contact me mobile
+![Contact me Mobile](/readme_imgs/contact/contactfm.png)
+
 
 
 

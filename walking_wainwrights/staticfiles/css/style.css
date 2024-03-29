@@ -8,9 +8,10 @@ body {
     padding: 0;
     background-color: black;
     font-family: Roboto Mono, sans-serif;
-    
+}
 
-
+.page-heading {
+    color: rgb(194, 194, 194);
 }
 
 /* contact form */

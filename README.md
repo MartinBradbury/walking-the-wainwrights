@@ -2,11 +2,11 @@
 
 (Developer: Martin Bradbury)
 
-![AmIResponsive Image](/readme_imags/Responsive.png)
+![AmIResponsive Image](/readme_imgs/Responsive.png)
 
 ## Live website
 
-Link to live website: [Statement Beauty](https://walking-the-wainwrights-7b754816f5c3.herokuapp.com/)
+Link to live website: [Walking the Wainwrights](https://walking-the-wainwrights-7b754816f5c3.herokuapp.com/)
 
 ## Purpose of the project
 

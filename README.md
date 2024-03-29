@@ -364,8 +364,56 @@ The design of the website was simple contrast of a dark black background and lig
 ![Card background](/readme_imgs/Color/card.png)
 
 
-
 ##  Wireframes:
+
+The overall structure of the website was kept from initial inception of wireframes to the result of the website on submission for assessment. Slight alterations were made to the layout of the about page and wainwrights page. These alterations were made to improve the feel of the website and UX. All initial wireframes can be seen below and were created using Adobe Xd. 
+
+### About page
+
+#### Desktop
+![About Desktop](/readme_imgs/wireframes/aboutd.png)
+
+#### Mobile
+![About Mobile](/readme_imgs/wireframes/aboutm.png)
+
+### Gallery page
+
+#### Desktop
+![Gallery Desktop](/readme_imgs/wireframes/gallery.png)
+
+#### Mobile
+![Gallery Mobile](/readme_imgs/wireframes/gallerym.png)
+
+### Routes page
+
+#### Desktop
+![Routes Desktop](/readme_imgs/wireframes/Routes.png)
+
+#### Mobile
+![Routes Mobile](/readme_imgs/wireframes/Routesm.png)
+
+### Routes detail
+
+#### Desktop
+![Routes detail Desktop](/readme_imgs/wireframes/Routedetail.png)
+
+#### Mobile
+![Routes detail Mobile](/readme_imgs/wireframes/routesdetailm.png)
+
+### Gallery Detail
+
+#### Desktop
+![Gallery Detail Desktop](/readme_imgs/wireframes/imagedetail.png)
+
+#### Mobile
+![Gallery Detail Mobile](/readme_imgs/wireframes/gallerydetailm.png)
+
+
+
+
+
+
+
 
 ##  Database Schema:
 
@@ -393,7 +441,7 @@ The design of the website was simple contrast of a dark black background and lig
 - [lucidcharts](https://www.lucidchart.com/pages/ "Link to lucidcharts") was used to make a diagram of the database schema and entity relationship diagrams.
 - [Prettier](https://prettier.io/ "link to official prettier website") was used as the default formatter in Gitpod IDE, for html and css files.
 - [Bootstrap](https://getbootstrap.com/ "link to official bootstrap website") was used to quickly layout, position and size critical website features
-- [Balsamiq](https://balsamiq.com/wireframes/ "link to official balsamiq website") was used in early planning to map out wireframes
+- [Adobe Xd](https://www.adobe.com/home/ "link to official Adobe website") was used in early planning to map out wireframes
 - [Google Fonts](https://fonts.google.com/ "link to official google fonts website") was used to import fonts
 - [Font Awesome](https://fontawesome.com/ "link to official font awesome website") was used for all icons
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/overview/ "Link to official chrome developer tools website") was used for lighthouse testing, debugging and consistently checking responsiveness

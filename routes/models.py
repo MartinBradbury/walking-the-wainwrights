@@ -6,51 +6,66 @@ from django.template.defaultfilters import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 DIFFICULTY_RATING = [
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
-    ]
+    (1, '1'),
+    (2, '2'),
+    (3, '3'),
+    (4, '4'),
+    (5, '5'),
+]
+
 
 class Route(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100)
+    slug = models.SlugField(max_length=100, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="route_post"
+        User, on_delete=models.CASCADE, related_name="route_posts"
     )
     content = models.TextField()
-    os_url = models.CharField()
+    os_url = models.URLField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     post_edit = models.DateTimeField(auto_now=True)
-    difficulty_rating = models.IntegerField(choices=DIFFICULTY_RATING, default=1)
+    difficulty_rating = models.IntegerField(
+        choices=DIFFICULTY_RATING,
+        default=1
+    )
     likes = models.ManyToManyField(
-        User, related_name='blogpost_like', blank=True)
+        User, related_name='blogpost_likes', blank=True
+    )
     status = models.IntegerField(choices=STATUS, default=0)
-    flagged = models.BooleanField()
+    flagged = models.BooleanField(default=False)
     feature_img = CloudinaryField('image', default='placeholder')
     route_video = models.URLField(blank=True, null=True)
+
     class Meta:
         ordering = ["-created_on"]
+
     def __str__(self):
         return self.title
+
     def snippet(self):
         return self.content[:100]
+
     def number_of_likes(self):
         return self.likes.count()
+
     def difficulty_icon(self):
-        # Define the Font Awesome icon class for the star
         icon_class = 'fa-solid fa-shoe-prints'
-        # Generate the HTML string for the icon, repeated as many times as the difficulty rating
-        icons_html = ''.join([f'<i class="fas {icon_class}"></i> | ' for _ in range(self.difficulty_rating)])
-        # Use format_html to safely format the HTML string
+        icons_html = ''.join([
+            f'<i class="fas {icon_class}"></i> | '
+            for _ in range(self.difficulty_rating)
+        ])
+
         return format_html(icons_html)
 
+
 class Comment(models.Model):
-    post = models.ForeignKey(Route, on_delete=models.CASCADE,
-                             related_name="comments")
+    post = models.ForeignKey(
+        Route,
+        on_delete=models.CASCADE,
+        related_name="comments"
+    )
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="commenter"
+        User, on_delete=models.CASCADE, related_name="comments"
     )
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

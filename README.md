@@ -174,7 +174,7 @@ The routes page is created by the admin and displays the different routes I have
 
 ### Route detail page
 
-When the user selects a route and clicks on the card they are taken to the routes detail page. This page highlights the route title at the top and below has a fully interactive os map which has been imported from Outdooractive with the route I have taken. This map can be zoomed and tracked around to the users desire. There is a brief summary of the route statistics on the map with a button offering the user to learn more. 
+When the user selects a route and clicks on the card they are taken to the routes detail page. This page highlights the route title at the top and below on desktop has a fully interactive os map which has been imported from Outdooractive with the route I have taken. This map can be zoomed and tracked around to the users desire. On mobile and overlaying the map on desktop there is a brief summary of the route statistics on the map with a button offering the user to learn more. (Not there is an interactive map on mobile when the user clicks the learn more).
 
 #### Interactive map
 ![Interactive map](/readme_imgs/Routedetail/mapd.png)
@@ -238,6 +238,62 @@ When commented the user will recieve a message saying their comment is waiting a
 
 There is a message counter that shows how many messages there are on this route of which have been approved. Approved messages appear in black text and detail the author and time posted. 
 ![Comment Counter and approved](/readme_imgs/Routedetail/commentcounterapproved.png)
+
+### Gallery
+
+The gallery section displays images uploaded by the site admin or the users. The images appear in cards with a priview of the image at the top of the card and the heading and comment below it. The cards also display when the image was posted and by who. The image cards are clickable to reveal more detail. On desktop the cards are displayed in pairs with a maximum of 4 per page. On mobile the images are displaye in a column with a max of 4 per page. The page has pagination to navigate between the gallery pages. 
+
+#### Image cards Desktop
+![Image gallery desktop](/readme_imgs/gallery/galleryd.png)
+
+#### Image cards Mobile
+![Image gallery mobile](/readme_imgs/gallery/gallerym.png)
+
+#### Pagination
+![Pagination](/readme_imgs/gallery/gallerypagi.png)
+
+#### Gallery image detail
+
+On clicking on the image card the user will be taken to the specific picture page. On desktop the image will be larger and in more detail. Just like on the route page, logged in users will be able to like the image, see the like counter and also comment on the image. On mobile devices the user will be able to like and comment on the image but it will not display larger due to screen size. 
+
+#### Larger Image
+![Larger Image](/readme_imgs/gallery/gallerylarge.png)
+
+#### Like button
+![Like button](/readme_imgs/gallery/likebuttongallery.png)
+
+#### Comment Section
+![Comment section](/readme_imgs/gallery/commentgallery.png)
+
+#### Upload a photo
+
+On the gallery page logged in users are able to upload photos. The upload photo uses a javascript widget from cloudinary which presents users with many ways to upload the photo. The widget also takes care of image formatting but only allows users to upload photos less than 10mb. The users have to then give the photo a title and brief description which will be displayed on the gallery card and detail. These are required fields. Once submitted the users are presented with a message informing them they the image has been submitted and waiting approval. 
+
+#### Upload image form
+![Upload Image](/readme_imgs/gallery/uploadformd.png)
+
+#### Upload image widge
+Desktop:
+![upload widget desktop](/readme_imgs/gallery/widget.png)
+
+Mobile:
+![upload widget mobile](/readme_imgs/gallery/widgetm.png)
+
+#### Image uploading
+![Uploading image](/readme_imgs/gallery/widgetupload.png)
+
+#### Image input fields
+![Upload input field](/readme_imgs/gallery/uploadinput.png)
+
+#### Image message success
+![Upload Success](/readme_imgs/gallery/uploadsuccess.png)
+
+
+
+
+### Wainwrights
+
+### Admin
 
 
 

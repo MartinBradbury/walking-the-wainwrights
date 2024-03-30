@@ -637,24 +637,24 @@ Performance, accessibility, best practices and seo were tested using [lighthouse
 Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after I converted my images to webp and corrected some of the suggestions. If time allowed and with further development of the site I would include all image uploads are converted to webp format by admin and user. I encountered an detailing that Cloudinary was not secure. I updated the settings.py to overcome this by importing cloudinary and using this code that was suggested on slack cloudinary.config(secure=True,). 
 
 #### About pages
-![About Page Desktop](/readme_imgs/Lighthouse/Aboutld.png)
-![About Page Mobile](/readme_imgs/Lighthouse/aboutlm.png)
+![About Page Desktop](/readme_imgs/Lighthouse/aboutld%20(2).png)
+![About Page Mobile](/readme_imgs/Lighthouse/aboutlm%20(2).png)
 
 #### Gallery Pages
-![Gallery Page Desktop](/readme_imgs/Lighthouse/galleryld.png)
-![Gallery Page Mobile](/readme_imgs/Lighthouse/gallerylm.png)
+![Gallery Page Desktop](/readme_imgs/Lighthouse/galleryld%20(2).png)
+![Gallery Page Mobile](/readme_imgs/Lighthouse/gallerylm%20(2).png)
 
 #### Gallery Detail
-![Gallery Detail Desktop](/readme_imgs/Lighthouse/gallerydld.png)
-![Gallery Detail Mobile](/readme_imgs/Lighthouse/gallerydlm.png)
+![Gallery Detail Desktop](/readme_imgs/Lighthouse/galleryldd.png)
+![Gallery Detail Mobile](/readme_imgs/Lighthouse/galleryldm.png)
 
 #### Routes Page
-![Routes Page Desktop](/readme_imgs/Lighthouse/routesld.png)
-![Routes Page Mobile](/readme_imgs/Lighthouse/reouteslm.png)
+![Routes Page Desktop](/readme_imgs/Lighthouse/routesld%20(2).png)
+![Routes Page Mobile](/readme_imgs/Lighthouse/routeslm.png)
 
 #### Routes Detail
-![Routes Page Desktop](/readme_imgs/Lighthouse/routesdld.png)
-![Routes Page Mobile](/readme_imgs/Lighthouse/routesdlm.png)
+![Routes Page Desktop](/readme_imgs/Lighthouse/routesldd.png)
+![Routes Page Mobile](/readme_imgs/Lighthouse/routesldm.png)
 
 ### User Testing:
 

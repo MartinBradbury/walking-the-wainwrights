@@ -14,6 +14,118 @@ The purpose of my website is to share my personal journey and experiences of wal
 
 ## Table of contents
 
+- [Live website](#live-website)
+- [Purpose of the project](#purpose-of-the-project)
+- [User experience (UX)](#user-experience-ux)
+ - [Key project goals](#key-project-goals)
+ - [Target Audience](#target-audience)
+ - [User requirements and expectations](#user-requirements-and-expectations)
+- [Epics and User Stories](#epics-and-user-stories)
+ - [As site Admin](#as-site-admin)
+- [Features](#features)
+ - [Nav bar](#nav-bar)
+ - [Hero image Carousel](#hero-image-carousel)
+ - [About me cards](#about-me-cards)
+ - [About me content](#about-me-content)
+ - [Social media footer](#social-media-footer)
+ - [Contact me](#contact-me)
+ - [Routes page](#routes-page)
+ - [Route detail page](#route-detail-page)
+    - [Difficulty rating](#difficulty-rating)
+    - [Like button and counter](#like-button-and-counter)
+    - [Hike description](#hike-description)
+    - [3D Hike Video](#3d-hike-video)
+    - [Comment form](#comment-form)
+    - [Message counter and Approved messages](#message-counter-and-approved-messages)
+    - [Gallery](#gallery)
+ - [Image cards Desktop](#image-cards-desktop)
+ - [Image cards Mobile](#image-cards-mobile)
+ - [Pagination](#pagination)
+ - [Gallery image detail](#gallery-image-detail)
+ - [Larger Image](#larger-image)
+ - [Like button](#like-button)
+ - [Comment Section](#comment-section)
+ - [Upload a photo](#upload-a-photo)
+    - [Upload image form](#upload-image-form)
+    - [Upload image widge](#upload-image-widge)
+      - [Desktop](#desktop)
+      - [Mobile](#mobile)
+    - [Image uploading](#image-uploading)
+    - [Image input fields](#image-input-fields)
+    - [Image message success](#image-message-success)
+- [Wainwrights](#wainwrights)
+ - [Wainwrights Desktop](#wainwrights-desktop)
+ - [Wainwrights Mobile](#wainwrights-mobile)
+- [Login, Logout, Register](#login-logout-register)
+ - [Login Desktop](#login-desktop)
+ - [Login Mobile](#login-mobile)
+ - [Logout Desktop](#logout-desktop)
+ - [Logout Mobile](#logout-mobile)
+ - [Register desktop](#register-desktop)
+ - [Register mobile](#register-mobile)
+- [Admin Control](#admin-control)
+ - [Admin Control](#admin-control)
+ - [Admin filters](#admin-filters)
+ - [Admin actions](#admin-actions)
+- [Future Features](#future-features)
+- [Design](#design)
+ - [White Text](#white-text)
+ - [Black](#black)
+ - [Hover](#hover)
+ - [Card Background colour](#card-background-colour)
+- [Wireframes](#wireframes)
+ - [About page](#about-page)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+ - [Gallery page](#gallery-page)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+ - [Routes page](#routes-page)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+ - [Routes detail](#routes-detail)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+ - [Gallery Detail](#gallery-detail)
+    - [Desktop](#desktop)
+    - [Mobile](#mobile)
+- [Database Schema](#database-schema)
+- [Technology Used](#technology-used)
+ - [Languages and framework](#languages-and-framework)
+ - [Database](#database)
+ - [Technologies and tools](#technologies-and-tools)
+- [Testing](#testing)
+ - [HTML Validation](#html-validation)
+ - [CSS Validation](#css-validation)
+ - [JS Validation](#js-validation)
+ - [Python Validation](#python-validation)
+ - [Python Result](#python-result)
+- [Lighthouse](#lighthouse)
+ - [Lighthouse Results Table](#lighthouse-results-table)
+ - [About Pages](#about-pages)
+ - [Gallery Pages](#gallery-pages)
+ - [Gallery Detail](#gallery-detail)
+ - [Routes Page](#routes-page)
+ - [Routes Detail](#routes-detail)
+- [User Testing](#user-testing)
+ - [Notifications and Feedback Testing for Comments on All Pages](#notifications-and-feedback-testing-for-comments-on-all-pages)
+ - [Notifications and Feedback Testing for Register, Signin, and Signout](#notifications-and-feedback-testing-for-register-signin-and-signout)
+ - [Notifications and Feedback Testing for Routes, Routes Details](#notifications-and-feedback-testing-for-routes-routes-details)
+ - [Notification and Feedback Testing for Gallery, Gallery Detail, and Image Upload](#notification-and-feedback-testing-for-gallery-gallery-detail-and-image-upload)
+ - [Notification and Feedback Testing for About Page](#notification-and-feedback-testing-for-about-page)
+ - [Notification and Feedback Testing for Social Media Links](#notification-and-feedback-testing-for-social-media-links)
+ - [Notifications and Feedback Testing for Admin Panel](#notifications-and-feedback-testing-for-admin-panel)
+- [Responsiveness](#responsiveness)
+- [Devices Used for Testing, OS, and Browsers](#devices-used-for-testing-os-and-browsers)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+ - [Pre Deployment](#pre-deployment)
+ - [Deploying with Heroku](#deploying-with-heroku)
+- [Credits](#credits)
+ - [Code](#code)
+ - [Images](#images)
+
+
 ## User experience (UX)
 
 ### Key project goals
@@ -537,7 +649,7 @@ Performance, accessibility, best practices and seo were tested using [lighthouse
 
 ### Lighthouse results table
 
-Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after i converted my images to webp and corrected some of the suggestions. It time allowed and with further development of the site I would include not only ensuring all image uploads are converted to webp format but also the delivery from Cloudinary would be https and not require the browser to make this change to secure the image download from the storage site. 
+Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after i converted my images to webp and corrected some of the suggestions. If time allowed and with further development of the site I would include all image uploads are converted to webp format by admin and user. I encountered an detailing that Cloudinary was not secure. I updated the settings.py to overcome this by importing cloudinary and using this code that was suggested on slack cloudinary.config(secure=True,). 
 
 #### About pages
 ![About Page Desktop](/readme_imgs/Lighthouse/Aboutld.png)
@@ -643,21 +755,77 @@ Lighthouse tests were ran on all pages. Pages showed lower performance than I wa
 All pages on the website were tested for responsiveness across multiple devices. All pages display correctly on all devices tested.
 
 
-### Devices used for testing
+### Devices used for testing, OS and Browsers
 
 -   Iphone 12, 13, 14
 -   Latest and Legacy Android Smartphones: Test on devices from manufacturers Samsung, Google. This includes models running the latest OS versions Android 12 & 13.
 -   Latest and Legacy iOS Devices: Include the latest and legacy handsets by Apple, iPhone X, iPhone 12 Mini, iPhone 13 Pro, and iPhone 14 Plus. This ensures testing on the    latest iOS versions like iOS 15 and 16.
 -   Windows OS, windows 10 and windows 11 devices were used to test the website
 -   Mac OS, Mac os was tested using a macbook air.
+-   Chrome
+-   Firefox
+-   Safari
+-   Edge
+-   Opera
 
 
 ### bugs
 
+-   login success message sometimes appears when the user is logged in and navigates to the gallery page for the first time.
+-   Reloading the page sends another request through to the database and duplicates the comment left. 
+
 ##  Deployment:
 
+### Pre deployment
+
+- To ensure successful deployment with heroku, it's good practice to make sure that the requirements.txt file is kept up to date so as that imported python modules are configured correctly.
+- A Procfile is required to allow heroku deployment to be configured to a gunicorn web app.
+- In settings.py configure the ALLOWED_HOSTS list the format ['app_name.heroku.com', 'localhost'], make sure all static files and directories are configured correctly.
+- All environment variables on the env.py which gitignored on the repo must be configured correctly with the database url, cloundinary url and secret key.
+
+### Deploying with heroku
+
+After account setup, the steps were as follows:
+
+1.  Create a New App on Heroku:
+    -   Log into your Heroku account.
+    -   Click on "Create new app" and provide a unique name for your app.
+    -   Choose the region for your app (e.g., Europe).
+    -   Click "Create app".
+2.  Connect to GitHub:
+    -   In the deployment method section, select GitHub.
+    -   Search for your GitHub repository and click "Connect".
+3.  Configure Deployment Settings:
+    -   Choose between manual or automatic deployment. For automatic deployment, ensure the main branch is selected.
+    -   In the settings tab, reveal config vars and input the required hidden variables.
+4.  Set Buildpacks:
+    -   Go to the settings tab and select "Buildpacks".
+    -   Add Node.js and Python as the buildpacks for your application.
+5.  Deploy Your App:
+    -   Click "Deploy" to start the deployment process.
+    -   After the first deployment, you will receive a message indicating that your app was successfully deployed.
+    -   Use the "View" button to access your deployed application.
+This process leverages Heroku's integration with GitHub to automate the deployment of your application, making it easier to manage and update your project.
+
+The live link for this project can be found here - [Walking the Wainwrights](https://walking-the-wainwrights-7b754816f5c3.herokuapp.com/)
+
+
 ##  Credits
+
 ### Code
+
+[CI walkthrough I think therefore I blog](https://github.com/Code-Institute-Solutions/blog/tree/main/12_views_part_3/05_edit_delete) - The CI walkthrough repo was relied upon  for the comment section, edit and delete button however I created custom models to suit the theme of the website.
+
+[Cloudinary Documentation](https://cloudinary.com/) - The documentation and code in tutorial enabled me to embed the image upload widget into my project. I used the Javascript in my images.js file. 
+
+[Outdoor Active](https://www.outdooractive.com/en/) - Following instructions from outdoor active I was able to embed the routes into my own website. Outdooractive also creates the 3D maps which have been used in the website. 
+
 ### Images
 
+-   Images used in this project have been taken by myself primeraly. Additional images were used on the wainwright cards and were taken from wikipedia.
+www.wikipedia.com
+
+
 ## Acknowledgements
+
+Thankyou to all who supported me on this project. My family have been a great support for me expecually working late into the evening after a full days teaching. This project would not have been possible without their support. 

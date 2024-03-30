@@ -47,7 +47,7 @@ The purpose of my website is to share my personal journey and experiences of wal
  - [Comment Section](#comment-section)
  - [Upload a photo](#upload-a-photo)
     - [Upload image form](#upload-image-form)
-    - [Upload image widge](#upload-image-widge)
+    - [Upload image widget](#upload-image-widge)
       - [Desktop](#desktop)
       - [Mobile](#mobile)
     - [Image uploading](#image-uploading)
@@ -106,7 +106,7 @@ The purpose of my website is to share my personal journey and experiences of wal
  - [Gallery Pages](#gallery-pages)
  - [Gallery Detail](#gallery-detail)
  - [Routes Page](#routes-page)
- - [Routes Detail](#routes-detail)
+ - [Routes Details](#routes-detail)
 - [User Testing](#user-testing)
  - [Notifications and Feedback Testing for Comments on All Pages](#notifications-and-feedback-testing-for-comments-on-all-pages)
  - [Notifications and Feedback Testing for Register, Signin, and Signout](#notifications-and-feedback-testing-for-register-signin-and-signout)
@@ -124,7 +124,6 @@ The purpose of my website is to share my personal journey and experiences of wal
 - [Credits](#credits)
  - [Code](#code)
  - [Images](#images)
-
 
 ## User experience (UX)
 
@@ -145,7 +144,7 @@ The purpose of my website is to share my personal journey and experiences of wal
 
 ### User requirements and expectations
 
-- Access to my Detailed Routes, videos and Images: Users expect to find information on my detailed routes taken as I endevour to summit all the Wainwright.
+- Access to my Detailed Routes, videos and Images: Users expect to find information on my detailed routes taken as I endeavour to summit all the Wainwright.
 - Interactive Features: Users anticipate interactive features such as a map of my routes, video of each route and images taken along the way. Each Wainwright I have completed is listed with its details, and its rank in terms of height.
 - Community Engagement: Users look forward to engaging with the community through features like message boards, and the ability to upload their own images and experiences. This fosters a sense of community and encourages sharing of personal stories and routes.
 - Educational Content: Users appreciate educational content that provides insights into the wainwrights I have completed.
@@ -164,7 +163,7 @@ The purpose of my website is to share my personal journey and experiences of wal
 3.  Epic: Community Interaction:
     -   User Story 1: As a user, I want to contact the website owner directly or leave messages on their routes and photos.
     -   User Story 2: As a user, I want to interact with other community members through comments and forums, so that I can share my experiences and learn from others.
-    -   User Story 3: As a user, I want to be able to delete my account and all the posts / imgaes I have left on the website. 
+    -   User Story 3: As a user, I want to be able to delete my account and all the posts / images I have left on the website. 
 
 4.  Epic: Educational Content and Resources:
     -   User Story 1: As a user, I want to access educational content about the Lake District and the Wainwrights the site owner has completed, so that I can deepen my understanding and appreciation of the area.
@@ -180,7 +179,7 @@ The purpose of my website is to share my personal journey and experiences of wal
     -   Full backend CRUD on Routes, Images and comments.
     -   Approve posts, images and comments.
     -   Create route posts so users are able to see the routes I have taken.
-    -   I can flag potential posts and images that are sensetive.
+    -   I can flag potential posts and images that are sensitive.
     -   I can respond to contact requests and mark as read.
 
 7.  Epic: Routes and Images pages:
@@ -192,7 +191,7 @@ The purpose of my website is to share my personal journey and experiences of wal
 
 ### Nav bar
 
-A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon is functional on tablets too upto and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are: 'About' - Which takes you to the homepage, 'Routes' - Navigates to the routes page, 'Gallery' - which navigates to the photo gallery page, 'Logout' - if already logged in, 'Register' - Navigates to signup page and 'Login' - Which enables an existing user to login. The title is also clickable and navigates to the about page. The Nav bar also indicated to the user if they are signed in or not and remain sticky to the top of the window.
+A fully responsive navigation bar is in has been used. The main focus was on a 'mobile first' design where a clickable burger icon with a drop down menu appears on mobile. There is a burger icon is functional on tablets too up to and not including the ipad pro 12.9. Desktop view the burger menu disappears and the navigation menu appears along the navigation bar. The links in the Navigation element are: 'About' - Which takes you to the homepage, 'Routes' - Navigates to the routes page, 'Gallery' - which navigates to the photo gallery page, 'Logout' - if already logged in, 'Register' - Navigates to signup page and 'Login' - Which enables an existing user to login. The title is also clickable and navigates to the about page. The Nav bar also indicated to the user if they are signed in or not and remain sticky to the top of the window.
 
 #### Desktop Navigation
 ![Desktop navbar](/readme_imgs/navbar/navbarD.png)
@@ -201,14 +200,13 @@ A fully responsive navigation bar is in has been used. The main focus was on a '
 ![Mobile burger navigation button](/readme_imgs/navbar/navbarmburger.png)
 ![Mobile dropdown navigation menu](/readme_imgs/navbar/navbarmdrop.png)
 
-
 #### Signed in status
 ![Not signed in](/readme_imgs/navbar/navbarnotlogged.png)
 ![Signed in](/readme_imgs/navbar/navbarlogged.png)
 
 ### Hero image Carousel
 
-The hero image is a carousel of 3 images the site admin has the opportunity to change at any point in django admin. The carousel can rotates each image on all devices or can be manually invoked by clicking the left or right arrow.
+The hero image is a carousel of 3 images the site admin has the opportunity to change at any point in Django admin. The carousel can rotates each image on all devices or can be manually invoked by clicking the left or right arrow.
 
 #### Carousel Desktop
 ![Carousel images Desktop](/readme_imgs/Carousel/carouseld.png)
@@ -221,7 +219,7 @@ The hero image is a carousel of 3 images the site admin has the opportunity to c
 
 ### About me cards
 
-The mid section of the homepage (about page) comprises of 3 cards with a heading a description. These cards inform the user what they will find in each of these sections and help to draw their attention using imigary of what they are linkely to find in each section. The whole card is clickable and links to the corrospoiding page in the website.
+The mid section of the homepage (about page) comprises of 3 cards with a heading a description. These cards inform the user what they will find in each of these sections and help to draw their attention using imagery of what they are likely to find in each section. The whole card is clickable and links to the corresponding page in the website.
 
 #### About cards Desktop
 ![About card links desktop](/readme_imgs/aboutcards/aboutcardsd.png)
@@ -246,7 +244,7 @@ This section informs the user about my journey and my goals. It sets the tone fo
 #### Return to top button
 ![Return to top](/readme_imgs/aboutme/uparrow.png)
 
-### Social meadia footer
+### Social media footer
 
 The footer has links to social media where users are able to interact with me further. All the buttons are clickable and open the social media in a new window or tab.
 
@@ -258,7 +256,7 @@ The footer has links to social media where users are able to interact with me fu
 
 ### Contact me
 
-This section offers the user the opportunity to send me a message directly. All fields are required for the user to send me a message and the user is informed when the message has been sent successfully with a django message. These features work on all device sizes and are fully responsive. 
+This section offers the user the opportunity to send me a message directly. All fields are required for the user to send me a message and the user is informed when the message has been sent successfully with a Django message. These features work on all device sizes and are fully responsive. 
 
 #### Contact me desktop
 ![Contact me Desktop](/readme_imgs/contact/contactfd.png)
@@ -286,7 +284,7 @@ The routes page is created by the admin and displays the different routes I have
 
 ### Route detail page
 
-When the user selects a route and clicks on the card they are taken to the routes detail page. This page highlights the route title at the top and below on desktop has a fully interactive os map which has been imported from Outdooractive with the route I have taken. This map can be zoomed and tracked around to the users desire. On mobile and overlaying the map on desktop there is a brief summary of the route statistics on the map with a button offering the user to learn more. (Not there is an interactive map on mobile when the user clicks the learn more).
+When the user selects a route and clicks on the card they are taken to the routes detail page. This page highlights the route title at the top and below on desktop has a fully interactive os map which has been imported from Outdoor active with the route I have taken. This map can be zoomed and tracked around to the users desire. On mobile and overlaying the map on desktop there is a brief summary of the route statistics on the map with a button offering the user to learn more. (Not there is an interactive map on mobile when the user clicks the learn more).
 
 #### Interactive map
 ![Interactive map](/readme_imgs/Routedetail/mapd.png)
@@ -294,7 +292,7 @@ When the user selects a route and clicks on the card they are taken to the route
 #### Interactive map zoomed
 ![Interactive map zoomed](/readme_imgs/Routedetail/mapdz.png)
 
-Once clicked a pop up will appear with all the details and statistics of the hike. It will give the user a larger interactive map, a 3D generated video of the route taken and statitics. It will also give the user the opportunity to download the GPX, KML, FIT file of my route so they are able to navigate from it from any navigation device they may have. This pop up can be exited by clicking the cross on the top right corner. 
+Once clicked a pop up will appear with all the details and statistics of the hike. It will give the user a larger interactive map, a 3D generated video of the route taken and statistics. It will also give the user the opportunity to download the GPX, KML, FIT file of my route so they are able to navigate from it from any navigation device they may have. This pop up can be operated by clicking the cross on the top right corner. 
 
 #### Learn more page
 ![Learn More](/readme_imgs/Routedetail/mapdetail.png)
@@ -309,10 +307,9 @@ Once clicked a pop up will appear with all the details and statistics of the hik
 #### Close popup
 ![Close popup](/readme_imgs/Routedetail/mapdexit.png)
 
-
 #### Difficulty rating
 
-Back on the route detail page there is a difficulty rating where fontawesome icons have been used and a score is given for the difficulty. 
+Back on the route detail page there is a difficulty rating where font awesome icons have been used and a score is given for the difficulty. 
 ![Difficulty Rating](/readme_imgs/Routedetail/routedifficulty.png)
 
 #### Like button and counter
@@ -322,13 +319,13 @@ There is a like button and like counter. The like button can only be interacted 
 ![Like button liked](/readme_imgs/Routedetail/likebuttonliked.png)
 ![Like button must be logged in](/readme_imgs/Routedetail/likebuttonneedlogin.png)
 
-#### Hike desctiption
+#### Hike description
 There is a description of my experiences on this particular hike. 
 ![Hike Description](/readme_imgs/Routedetail/routedescription.png)
 
 #### 3D Hike Video
 
-There is an embeded youtive video of a 3D representation of my hike. 
+There is an embedded youtube video of a 3D representation of my hike. 
 ![3D Hike Video](/readme_imgs/Routedetail/3dvideo.png)
 ![3D Hike Video](/readme_imgs/Routedetail/3dvideoplaying.png)
 
@@ -339,7 +336,7 @@ There is a comment form where the user is able to leave a message about this par
 ![Comment message accepted](/readme_imgs/Routedetail/commentwaiting.png)
 ![Comment must be logged in](/readme_imgs/Routedetail/commentformneedlogin.png)
 
-When commented the user will recieve a message saying their comment is waiting approval and they will see a faded message. They are able to edit this message and / or delete the message. When the select edit the origional message will appear in the body and the button will change to update. Django messages will inform the user when these tasks have been completed successfully. 
+When commented the user will receive a message saying their comment is awaiting approval and they will see a faded message. They are able to edit this message and / or delete the message. When the select edit the original message will appear in the body and the button will change to update. Django messages will inform the user when these tasks have been completed successfully. 
 
 ![Comment Edit](/readme_imgs/Routedetail/Commenteditbody.png)
 ![Comment Edit message](/readme_imgs/Routedetail/editcomment.png)
@@ -353,7 +350,7 @@ There is a message counter that shows how many messages there are on this route 
 
 ### Gallery
 
-The gallery section displays images uploaded by the site admin or the users. The images appear in cards with a priview of the image at the top of the card and the heading and comment below it. The cards also display when the image was posted and by who. The image cards are clickable to reveal more detail. On desktop the cards are displayed in pairs with a maximum of 4 per page. On mobile the images are displaye in a column with a max of 4 per page. The page has pagination to navigate between the gallery pages. 
+The gallery section displays images uploaded by the site admin or the users. The images appear in cards with a preview of the image at the top of the card and the heading and comment below it. The cards also display when the image was posted and by who. The image cards are clickable to reveal more detail. On desktop the cards are displayed in pairs with a maximum of 4 per page. On mobile the images are displayed in a column with a max of 4 per page. The page has pagination to navigate between the gallery pages. 
 
 #### Image cards Desktop
 ![Image gallery desktop](/readme_imgs/gallery/galleryd.png)
@@ -379,12 +376,12 @@ On clicking on the image card the user will be taken to the specific picture pag
 
 #### Upload a photo
 
-On the gallery page logged in users are able to upload photos. The upload photo uses a javascript widget from cloudinary which presents users with many ways to upload the photo. The widget also takes care of image formatting but only allows users to upload photos less than 10mb. The users have to then give the photo a title and brief description which will be displayed on the gallery card and detail. These are required fields. Once submitted the users are presented with a message informing them they the image has been submitted and waiting approval. 
+On the gallery page logged in users are able to upload photos. The upload photo uses a JavaScript widget from cloudinary which presents users with many ways to upload the photo. The widget also takes care of image formatting but only allows users to upload photos less than 10mb. The users have to then give the photo a title and brief description which will be displayed on the gallery card and detail. These are required fields. Once submitted the users are presented with a message informing them they the image has been submitted and waiting approval. 
 
 #### Upload image form
 ![Upload Image](/readme_imgs/gallery/uploadformd.png)
 
-#### Upload image widge
+#### Upload image widget
 Desktop:
 ![upload widget desktop](/readme_imgs/gallery/widget.png)
 
@@ -400,10 +397,9 @@ Mobile:
 #### Image message success
 ![Upload Success](/readme_imgs/gallery/uploadsuccess.png)
 
-
 ### Wainwrights
 
-The wainwrights page is a simple page that just details all the Wainwrights I have completed. It comprises of cards 4 per row on desktop and stacked vertically on mobile. Each card has the image of the Wainright and a description of the Wainright with its height. The card also indentifies if I have completed this Wainwright or not. These cards are not clickable. 
+The wainwrights page is a simple page that just details all the Wainwrights I have completed. It comprises of cards 4 per row on desktop and stacked vertically on mobile. Each card has the image of the Wainright and a description of the Wainright with its height. The card also identifies if I have completed this Wainwright or not. These cards are not clickable. 
 
 #### Wainwrights Desktop
 ![Wainwrights desktop](/readme_imgs/wainwrights/wainwrightsd.png)
@@ -411,10 +407,9 @@ The wainwrights page is a simple page that just details all the Wainwrights I ha
 #### Wainwrights Mobile
 ![Wainwrights mobile](/readme_imgs/wainwrights/wainwrightsm.png)
 
-
 ### Login, Logout, Register
 
-The user login, logout and register page and styled for the purpose of the website but have all the same functionalite that Django Auth brings. Users are required to create an accout with a password that meets the minimim requirements. All fileds need to be completed with the exception of the email field. The Logout form logs the user out of that session. The login for asks for the users username and password. After successfully logging in, logging out or registering the users are take to the about page.
+The user login, logout and register page and styled for the purpose of the website but have all the same functionality that Django Auth brings. Users are required to create an account with a password that meets the minimum requirements. All fields need to be completed with the exception of the email field. The Logout form logs the user out of that session. The login for asks for the users username and password. After successfully logging in, logging out or registering the users are taken to the about page.
 
 #### Login Desktop
 ![Login Page desktop](/readme_imgs/user/logind.png)
@@ -425,19 +420,18 @@ The user login, logout and register page and styled for the purpose of the websi
 #### Logout Desktop
 ![Logout Desktop](/readme_imgs/user/logoutd.png)
 
-#### Logout Mobile
-![logout mobile](/readme_imgs/user/logoutm.png)
+#### Log out Mobile
+![log out mobile](/readme_imgs/user/logoutm.png)
 
-#### Register desktop
-![Register desktop](/readme_imgs/user/registerd.png)
+#### Register Desktop
+![Register Desktop](/readme_imgs/user/registerd.png)
 
 #### Register mobile
 ![Register mobile](/readme_imgs/user/registerm.png)
 
-
 ### Admin Control
 
-The Django Admin control enables the admin to approve images, and comments as well as ccreating routes and updating the carousel images on the about page easily. Filter methods have been added to easily see posts and actions have been added to enable to admin to approve or delete multiple posts quickly and easily. 
+The Django Admin control enables the admin to approve images, and comments as well as creating routes and updating the carousel images on the about page easily. Filter methods have been added to easily see posts and actions have been added to enable to admin to approve or delete multiple posts quickly and easily. 
 
 #### Admin Control
 ![Admin Control](/readme_imgs/admin/admin%20control.png)
@@ -448,33 +442,29 @@ The Django Admin control enables the admin to approve images, and comments as we
 #### Admin actions
 ![Admin Actions](/readme_imgs/admin/adminactions.png)
 
-
 ##  Future Features:
 
 1.  Enable users to post their own routes that people can comment on.
 2.  Allow users to reply to specific comments in the comments section rather than them just appearing in a list.
-3.  Utalise the flagged function I put into the database so if the user deletes their account, all posts are deleted that are flgged for sensitive information but any other comments remain but only the username is removed. This will enable consistency when following convocations. 
+3.  Utilize the flagged function I put into the database so if the user deletes their account, all posts are deleted that are flagged for sensitive information but any other comments remain but only the username is removed. This will enable consistency when following convocations. 
 4.  All the wainwrights will be detailed in the wainwrights section with a key at the top of the page to go directly to the wainwright. 
 5.  The wainwright cards are clickable to reveal more information, map grid ref and interactive map.
-
 
 ##  Design:
 
 The design of the website was simple contrast of a dark black background and lighter white text. This enabled the cards to stand out. 
 
-
 ### White Text: rgba(255, 255, 255, 0.692);
-![Text color](/readme_imgs/Color/text.png)
+![Text colour](/readme_imgs/Color/text.png)
 
 ### Black: Black
 ![Background](/readme_imgs/Color/black.png)
 
 ### Hover: rgba(255, 255, 255, 0.2);
-![Hover Color](/readme_imgs/Color/hover.png)
+![Hover Colour](/readme_imgs/Color/hover.png)
 
 ### Card Background colour: rgba(255, 255, 255, 0.879);
 ![Card background](/readme_imgs/Color/card.png)
-
 
 ##  Wireframes:
 
@@ -520,13 +510,11 @@ The overall structure of the website was kept from initial inception of wirefram
 #### Mobile
 ![Gallery Detail Mobile](/readme_imgs/wireframes/gallerydetailm.png)
 
-
 ##  Database Schema:
 
 Here you can find my initial ERD (Entity Relationship Diagram). This got modified significantly as my project developed and I realised I had the opportunity to develop more features and fields to my databases.
 
 ![ERD](/readme_imgs/ER%20Diagram.jpeg)
-
 
 ##  Technology Used:
 ### Languages and framework:
@@ -536,7 +524,7 @@ Here you can find my initial ERD (Entity Relationship Diagram). This got modifie
 - [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS "link to css mozilla documentation")
   was used to add custom styles
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript "link to javascript mozilla documentation") was used to dynamically reset the comment form if the reset button was clicked and to show a modal when the edit comment button was clicked
-- [Django](https://www.djangoproject.com/ "link to django docs homepage") was the python framework used to develop the site
+- [Django](https://www.djangoproject.com/ "link to Django docs homepage") was the python framework used to develop the site
 
 ### Database:
 
@@ -583,7 +571,6 @@ All HTML pages were tested with the [W3C HTML Validator](https://validator.w3.or
 | logout page            |  <details><summary>Sign Out</summary><img src="./readme_imgs/html/logout.png"></details>                                                 | PASS   |
 | sign up page           |  <details><summary>Register</summary><img src="./readme_imgs/html/signup.png"></details>                                                 | PASS   |
 
-
 ### CSS Validation
 
 Custom CSS was put through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
@@ -606,7 +593,6 @@ The js code for both files passed.
 
 #### Images.js
 ![JS Validation images](/readme_imgs/js/js%20image.png)
-
 
 
 
@@ -642,14 +628,13 @@ All python code was put through the [CI Python Linter](https://pep8ci.herokuapp.
 | Routes View     |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter routes views.png"></details>               | PASS   |
 | Settings        |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter Settings.png"></details>                   | PASS   |
 
-
 ## Lighthouse
 
 Performance, accessibility, best practices and seo were tested using [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) in Chrome DevTools.
 
 ### Lighthouse results table
 
-Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after i converted my images to webp and corrected some of the suggestions. If time allowed and with further development of the site I would include all image uploads are converted to webp format by admin and user. I encountered an detailing that Cloudinary was not secure. I updated the settings.py to overcome this by importing cloudinary and using this code that was suggested on slack cloudinary.config(secure=True,). 
+Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after I converted my images to webp and corrected some of the suggestions. If time allowed and with further development of the site I would include all image uploads are converted to webp format by admin and user. I encountered an detailing that Cloudinary was not secure. I updated the settings.py to overcome this by importing cloudinary and using this code that was suggested on slack cloudinary.config(secure=True,). 
 
 #### About pages
 ![About Page Desktop](/readme_imgs/Lighthouse/Aboutld.png)
@@ -670,7 +655,6 @@ Lighthouse tests were ran on all pages. Pages showed lower performance than I wa
 #### Routes Detail
 ![Routes Page Desktop](/readme_imgs/Lighthouse/routesdld.png)
 ![Routes Page Mobile](/readme_imgs/Lighthouse/routesdlm.png)
-
 
 ### User Testing:
 
@@ -695,13 +679,11 @@ Lighthouse tests were ran on all pages. Pages showed lower performance than I wa
 | signout  | You have signed out.                          | PASS                      |
 | register | Successfully signed in as username.           | PASS                      |
 
-
 ### Notifications and feedback testing for routes, routes details
-
 
 | Action                                    | Notifications and feedback for signin and out     | Does it work as expected? |
 | ------------------------------------------| --------------------------------------------------| ------------------------- |
-| Routes button in nav and body clicked     | Sucessfully navigated to routes page.             | PASS                      |
+| Routes button in nav and body clicked     | Successfully navigated to routes page.             | PASS                      |
 | Routes card clicked.                      | Successfully navigate to routes detail page       | PASS                      |
 | Interactive map                           | User can interact with the map, zoom etc          | PASS                      |
 | User can click the like btn               | User is able to like or unlike a route            | PASS                      |
@@ -709,12 +691,11 @@ Lighthouse tests were ran on all pages. Pages showed lower performance than I wa
 | Learn more btn                            | Clicking the learn more opens the popup           | PASS                      |
 | Download Files                            | Clicking on the file download initiates download  | PASS                      |
 
-
 ### Notification and feedback testing for gallery, gallery detail and image upload
 
 | Action                                    | Notifications and feedback for signin and out                 | Does it work as expected? |
 | ------------------------------------------| --------------------------------------------------------------| ------------------------- |
-| Gallery button in nav and body clicked    | Sucessfully navigated to gallery page.                        | PASS                      |
+| Gallery button in nav and body clicked    | Successfully navigated to gallery page.                        | PASS                      |
 | Gallery image card clicked.               | Successfully navigate to gallery detail page                  | PASS                      |
 | User can click the like btn               | User is able to like or unlike a gallery image                | PASS                      |
 | Upload Image btn                          | Clicking the upload image opens the cloudinary widget         | PASS                      |
@@ -724,19 +705,18 @@ Lighthouse tests were ran on all pages. Pages showed lower performance than I wa
 
 | Action                                    | Notifications and feedback for signin and out     | Does it work as expected? |
 | ------------------------------------------| --------------------------------------------------| ------------------------- |
-| Navigation menu links work                | Sucessfully navigated to desired page.            | PASS                      |
+| Navigation menu links work                | Successfully navigated to desired page.            | PASS                      |
 | Card bodies clicked                       | Successfully navigate to desired page.            | PASS                      |
 | Carousel images clicked                   | Cycle through carousel images                     | PASS                      |
 | Contact me button clicked                 | Navigate to contact me form                       | PASS                      |
-| Contact form completed                    | User recieves a success message                   | PASS                      |
+| Contact form completed                    | User receives a success message                   | PASS                      |
 | Top of page button clicked                | User returns to the top of the page               | PASS                      |
 
 ### Notification and feedback testing for social media links
 
 | Action                                    | Notifications and feedback for signin and out              | Does it work as expected? |
 | --------                                  | ---------------------------------------------              | ------------------------- |
-| Social media links clicked                | Sucessfully navigated to desired page in a new window      | PASS                      |
-
+| Social media links clicked                | Successfully navigated to desired page in a new window      | PASS                      |
 
 ### Notifications and feedback testing for admin panel
 
@@ -754,20 +734,18 @@ Lighthouse tests were ran on all pages. Pages showed lower performance than I wa
 
 All pages on the website were tested for responsiveness across multiple devices. All pages display correctly on all devices tested.
 
-
 ### Devices used for testing, OS and Browsers
 
--   Iphone 12, 13, 14
+-   iPhone 12, 13, 14
 -   Latest and Legacy Android Smartphones: Test on devices from manufacturers Samsung, Google. This includes models running the latest OS versions Android 12 & 13.
 -   Latest and Legacy iOS Devices: Include the latest and legacy handsets by Apple, iPhone X, iPhone 12 Mini, iPhone 13 Pro, and iPhone 14 Plus. This ensures testing on the    latest iOS versions like iOS 15 and 16.
 -   Windows OS, windows 10 and windows 11 devices were used to test the website
--   Mac OS, Mac os was tested using a macbook air.
+-   Mac OS, Mac os was tested using a MacBook air.
 -   Chrome
 -   Firefox
 -   Safari
 -   Edge
 -   Opera
-
 
 ### bugs
 
@@ -809,7 +787,6 @@ This process leverages Heroku's integration with GitHub to automate the deployme
 
 The live link for this project can be found here - [Walking the Wainwrights](https://walking-the-wainwrights-7b754816f5c3.herokuapp.com/)
 
-
 ##  Credits
 
 ### Code
@@ -822,10 +799,10 @@ The live link for this project can be found here - [Walking the Wainwrights](htt
 
 ### Images
 
--   Images used in this project have been taken by myself primeraly. Additional images were used on the wainwright cards and were taken from wikipedia.
+-   Images used in this project have been taken by myself primarily. Additional images were used on the wainwright cards and were taken from Wikipedia.
 www.wikipedia.com
-
 
 ## Acknowledgements
 
-Thankyou to all who supported me on this project. My family have been a great support for me expecually working late into the evening after a full days teaching. This project would not have been possible without their support. 
+Thank you to all who supported me on this project. My family have been a great support for me especially working late into the evening after a full days teaching. This project would not have been possible without their support. 
+

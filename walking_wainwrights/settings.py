@@ -1,11 +1,16 @@
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary
 
 if os.path.isfile('env.py'):
     import env
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+cloudinary.config(
+    secure=True,
+)
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 

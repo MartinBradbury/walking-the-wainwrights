@@ -3,7 +3,7 @@
 
 /* General Styling */
 body {
-    /* font-family: Arial, sans-serif; */
+    
     margin: 0;
     padding: 0;
     background-color: black;
@@ -11,7 +11,7 @@ body {
 }
 
 .page-heading {
-    color: rgb(194, 194, 194);
+    color: rgba(255, 255, 255, 0.692);
 }
 
 /* iframe */
@@ -22,7 +22,7 @@ iframe {
 /* contact form */
 .contact-form {
     min-height: 80vh;
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
     padding-top: 50px;
 }
 
@@ -129,7 +129,7 @@ footer {
 }
 
 .carousel-inner p {
-    color: aliceblue;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 /* About Section */
@@ -144,7 +144,7 @@ footer {
 }
 
 .about-me {
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 /* Page Top Icon */
@@ -159,13 +159,13 @@ footer {
 
 .fa-angle-up {
     text-decoration: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 /* Contact me Button */
 .contact-me {
     border: 1px solid white;
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
     background-color: transparent;
 }
 
@@ -191,9 +191,8 @@ footer {
     position: relative;
     display: inline-block;
     width: 100%;
-    /* Adjust as needed */
     height: 100%;
-    /* Adjust as needed */
+   
 }
 
 .image-container img {
@@ -234,7 +233,7 @@ footer {
 }
 
 .route-body p span {
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 .wainwright-card {
@@ -385,7 +384,7 @@ hr {
 
 /* Login, register and logout styling */
 .login-body {
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     flex-direction: column;
@@ -399,14 +398,14 @@ hr {
 .login-btn,
 .logout-btn,
 .signup-btn {
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
     border: 1px solid white;
     margin-bottom: 20px;
 }
 
 .form-text ul {
     list-style-type: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
     padding:0;
     margin:10px;
     margin-bottom: 20px;
@@ -419,7 +418,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white; 
+    color: rgba(255, 255, 255, 0.692); 
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -448,11 +447,11 @@ hr {
 }
 
 .white-text {
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 .signin-btn {
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 .gallery-container a {
@@ -475,13 +474,13 @@ hr {
 
 /* Routes Container */
 .routes-container {
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 /* Submit Button */
 #submitButton {
     background-color: rgb(67, 116, 62);
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 }
 
 #submitButton:hover {

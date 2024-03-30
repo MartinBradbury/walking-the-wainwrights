@@ -537,7 +537,7 @@ Performance, accessibility, best practices and seo were tested using [lighthouse
 
 ### Lighthouse results table
 
-Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after i converted my images to webp. Further development of the site would include me not only ensuring all image uploads are converted to webp format but also the delivery from Cloudinary would be https and not require the browser to make this change to secure the image download from the storage site. 
+Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after i converted my images to webp and corrected some of the suggestions. It time allowed and with further development of the site I would include not only ensuring all image uploads are converted to webp format but also the delivery from Cloudinary would be https and not require the browser to make this change to secure the image download from the storage site. 
 
 #### About pages
 ![About Page Desktop](/readme_imgs/Lighthouse/Aboutld.png)
@@ -560,10 +560,97 @@ Lighthouse tests were ran on all pages. Pages showed lower performance than I wa
 ![Routes Page Mobile](/readme_imgs/Lighthouse/routesdlm.png)
 
 
-
-
-
 ### User Testing:
+
+### Notifications and feedback testing for comments on all pages
+
+| Action                                                    | Notifications and feedback for comments                | Does it work as expected? |
+| --------------------------------------------------------- | ------------------------------------------------------ | ------------------------- |
+| Logged out and looking at comments                        | It should say "log in to leave a comment"              | PASS                      |
+| Submit a comment                                          | Comment submitted and awaiting approval                | PASS                      |
+| Delete a comment                                          | Your comment has been deleted successfully!            | PASS                      |
+| Edit a comment modal                                      | User is able to edit the comment in the body           | PASS                      |
+| Comment text in box on click of edit                      | Targeted text appears in comment box                   | PASS                      |
+| When edit button is clicked                               | The word submit changes to update                      | PASS                      |
+| Change mind about editing, can click reset                | Resets update back to submit and clears comment box    | PASS                      |
+| Edit a comment successfully                               | Comment Updated! Notification appears                  | PASS                      |
+
+### Notifications and feedback testing for register, signin and signout
+
+| Action   | Notifications and feedback for signin and out | Does it work as expected? |
+| -------- | --------------------------------------------- | ------------------------- |
+| signin   | Successfully signed in as username.           | PASS                      |
+| signout  | You have signed out.                          | PASS                      |
+| register | Successfully signed in as username.           | PASS                      |
+
+
+### Notifications and feedback testing for routes, routes details
+
+
+| Action                                    | Notifications and feedback for signin and out     | Does it work as expected? |
+| ------------------------------------------| --------------------------------------------------| ------------------------- |
+| Routes button in nav and body clicked     | Sucessfully navigated to routes page.             | PASS                      |
+| Routes card clicked.                      | Successfully navigate to routes detail page       | PASS                      |
+| Interactive map                           | User can interact with the map, zoom etc          | PASS                      |
+| User can click the like btn               | User is able to like or unlike a route            | PASS                      |
+| User can watch the video                  | User can interact with the youtube video          | PASS                      |
+| Learn more btn                            | Clicking the learn more opens the popup           | PASS                      |
+| Download Files                            | Clicking on the file download initiates download  | PASS                      |
+
+
+### Notification and feedback testing for gallery, gallery detail and image upload
+
+| Action                                    | Notifications and feedback for signin and out                 | Does it work as expected? |
+| ------------------------------------------| --------------------------------------------------------------| ------------------------- |
+| Gallery button in nav and body clicked    | Sucessfully navigated to gallery page.                        | PASS                      |
+| Gallery image card clicked.               | Successfully navigate to gallery detail page                  | PASS                      |
+| User can click the like btn               | User is able to like or unlike a gallery image                | PASS                      |
+| Upload Image btn                          | Clicking the upload image opens the cloudinary widget         | PASS                      |
+| submit image                              | Clicking on the submit image uploads the image for approval   | PASS                      |
+
+### Notification and feedback testing for about page
+
+| Action                                    | Notifications and feedback for signin and out     | Does it work as expected? |
+| ------------------------------------------| --------------------------------------------------| ------------------------- |
+| Navigation menu links work                | Sucessfully navigated to desired page.            | PASS                      |
+| Card bodies clicked                       | Successfully navigate to desired page.            | PASS                      |
+| Carousel images clicked                   | Cycle through carousel images                     | PASS                      |
+| Contact me button clicked                 | Navigate to contact me form                       | PASS                      |
+| Contact form completed                    | User recieves a success message                   | PASS                      |
+| Top of page button clicked                | User returns to the top of the page               | PASS                      |
+
+### Notification and feedback testing for social media links
+
+| Action                                    | Notifications and feedback for signin and out              | Does it work as expected? |
+| --------                                  | ---------------------------------------------              | ------------------------- |
+| Social media links clicked                | Sucessfully navigated to desired page in a new window      | PASS                      |
+
+
+### Notifications and feedback testing for admin panel
+
+| Action                                                | Notifications and feedback for comments                                                         | Does it work as expected? |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------- |
+| When contact request is marked in admin | The request was changed successfully.                                                                         | PASS                      |
+| When a comment has been approved in admin             | The comment "Comment" was changed successfully.                                                 | PASS                      |
+| When a comment is deleted by admin                    | Successfully deleted 1 comment.                                                                 | PASS                      |
+| When more than 1 comment is deleted by admin          | Successfully deleted 2 comments.                                                                | PASS                      |
+| When a Image is confirmed in admin                    | The image was successfully published.                                                           | PASS                      |
+| When a image is deleted by admin                      | Successfully deleted 1 booking.                                                                 | PASS                      |
+| When admin deletes more than 1 image                  | Successfully deleted 2 bookings.                                                                | PASS                      |
+
+### Responsiveness
+
+All pages on the website were tested for responsiveness across multiple devices. All pages display correctly on all devices tested.
+
+
+### Devices used for testing
+
+-   Iphone 12, 13, 14
+-   Latest and Legacy Android Smartphones: Test on devices from manufacturers Samsung, Google. This includes models running the latest OS versions Android 12 & 13.
+-   Latest and Legacy iOS Devices: Include the latest and legacy handsets by Apple, iPhone X, iPhone 12 Mini, iPhone 13 Pro, and iPhone 14 Plus. This ensures testing on the    latest iOS versions like iOS 15 and 16.
+-   Windows OS, windows 10 and windows 11 devices were used to test the website
+-   Mac OS, Mac os was tested using a macbook air.
+
 
 ### bugs
 

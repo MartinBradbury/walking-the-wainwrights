@@ -531,6 +531,38 @@ All python code was put through the [CI Python Linter](https://pep8ci.herokuapp.
 | Settings        |  <details><summary>Settings</summary><img src="./readme_imgs/linter/CI Linter Settings.png"></details>                   | PASS   |
 
 
+## Lighthouse
+
+Performance, accessibility, best practices and seo were tested using [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) in Chrome DevTools.
+
+### Lighthouse results table
+
+Lighthouse tests were ran on all pages. Pages showed lower performance than I wanted even after i converted my images to webp. Further development of the site would include me not only ensuring all image uploads are converted to webp format but also the delivery from Cloudinary would be https and not require the browser to make this change to secure the image download from the storage site. 
+
+#### About pages
+![About Page Desktop](/readme_imgs/Lighthouse/Aboutld.png)
+![About Page Mobile](/readme_imgs/Lighthouse/aboutlm.png)
+
+#### Gallery Pages
+![Gallery Page Desktop](/readme_imgs/Lighthouse/galleryld.png)
+![Gallery Page Mobile](/readme_imgs/Lighthouse/gallerylm.png)
+
+#### Gallery Detail
+![Gallery Detail Desktop](/readme_imgs/Lighthouse/gallerydld.png)
+![Gallery Detail Mobile](/readme_imgs/Lighthouse/gallerydlm.png)
+
+#### Routes Page
+![Routes Page Desktop](/readme_imgs/Lighthouse/routesld.png)
+![Routes Page Mobile](/readme_imgs/Lighthouse/reouteslm.png)
+
+#### Routes Detail
+![Routes Page Desktop](/readme_imgs/Lighthouse/routesdld.png)
+![Routes Page Mobile](/readme_imgs/Lighthouse/routesdlm.png)
+
+
+
+
+
 ### User Testing:
 
 ### bugs

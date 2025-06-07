@@ -86,6 +86,7 @@ WSGI_APPLICATION = 'walking_wainwrights.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+SUPABASE_API_KEY = os.getenv("SUPABASE_API_KEY")
 
 CSRF_TRUSTED_ORIGINS = [
     "https://8000-martinbradb-walkingthew-ugmdby4wxvr.ws-eu110.gitpod.io",
